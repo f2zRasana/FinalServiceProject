@@ -45,7 +45,9 @@ namespace WebApplication1
             UserManager userManager = new UserManager();
             if (userManager.LoginUser(user))
             {
-                Response.Redirect("Start.aspx");
+                string url;
+                url = "Start.aspx?email=" + user.Email;
+                Response.Redirect(url);
             }
             else
             {

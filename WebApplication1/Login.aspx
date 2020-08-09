@@ -43,19 +43,21 @@
                     <img class="card-img-top" src="Images/Login_Profile.png" alt="Card Image Top" style="width: 40%; margin-right: 30%" />
                     <div class="card-body">
                         <h5 class="card-title" style="text-align: center;">ورود اعضا</h5>
+                        <%-- Username field --%>
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #52517b; color: white; border-color: #52517b;">نام کاربری</span>
                             </div>
                             <asp:TextBox ID="Username_TextBox" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
                         </div>
+                        <%-- Password field --%>
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #52517b; color: white; border-color: #52517b;">کلمه عبور</span>
                             </div>
                             <asp:TextBox ID="Password_TextBox" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
-
                         </div>
+                        <%-- CheckBox field --%>
                         <div class="input-group mb-3" style="direction: rtl;">
                             <div class="input-group-append">
                                 <div class="">
@@ -64,17 +66,21 @@
                             </div>
                             <asp:Label ID="Label1" runat="server" CssClass="" Text="به خاطر بسپار" Style="text-align: right; margin-right: 10px;"></asp:Label>
                         </div>
+                        <%-- Login_Button --%>
                         <asp:Button ID="Login_Button" OnClick="Login_Button_Click" runat="server" Text="ورود" CssClass="btn btn-info btn-block" Style="border-radius: 40px; background-color: #4f145e; border-color: #4f145e;" />
+                      
                         <div style="text-align: center;">
+                            <%-- New User --%>
                             <p style="margin-top: 10px; padding-top: 10px; text-decoration: none;">
                                 عضو نیستید؟  
-                        <a onclick="Register();" href="#" style="text-decoration: none;" data-toggle="modal" data-target="#exampleModal">ثبت نام</a>
-                                <a href="/Loginm.aspx" id="loginCmp_link_empSubmit" style="text-decoration: none; display: none;">&nbsp;/&nbsp;ثبت نام کارمندان</a>
+                                <a href="#" style="text-decoration: none;" data-toggle="modal" data-target="#exampleModal">ثبت نام</a>
+                                <a href="#" style="text-decoration: none; display: none;">&nbsp;/&nbsp;ثبت نام کارمندان</a>
                             </p>
+                            <%-- Forgot Password --%>
                             <p>
                                 فراموشی 
-                        <a href="#" onclick="PasswordForget();" style="text-decoration: none;">کلمه عبور؟ </a>
-                                <a id="loginCmp_link_empPassword" onclick="emplyeePassword();" style="text-decoration: none; cursor: pointer;">&nbsp;/&nbsp;کارمندان</a>
+                                <a href="#" style="text-decoration: none;">کلمه عبور؟ </a>
+                                <a href="#" style="text-decoration: none; cursor: pointer;">&nbsp;/&nbsp;کارمندان</a>
                             </p>
                         </div>
                     </div>

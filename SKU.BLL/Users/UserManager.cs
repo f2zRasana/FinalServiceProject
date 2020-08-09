@@ -21,5 +21,17 @@ namespace SKU.BLL.Users
             UserDao userDao = new UserDao();
             return userDao.LoginUser(user);
         }
+
+        public User SelectUser(string email)
+        {
+            UserDao userDao = new UserDao();
+            return userDao.SelectUser(email);
+        }
+
+        public bool HaveAccess(string email)
+        {
+            UserDao userDao = new UserDao();
+            return userDao.HaveAccess(email);
+        }
     }
 }

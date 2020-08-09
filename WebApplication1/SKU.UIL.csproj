@@ -95,21 +95,28 @@
     <Content Include="bootstrap-4.3.1\js\bootstrap.bundle.min.js" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.js" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.min.js" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
     <Content Include="Images\9755310_erpLogo_sku_justTitle_Az.png" />
     <Content Include="Images\Asset 3.png" />
     <Content Include="Images\Login_PageBackground.gif" />
     <Content Include="Images\Login_Profile.png" />
     <Content Include="Images\Login_Schedule.png" />
     <Content Include="Images\Login_SkuLogo.png" />
+    <Content Include="Images\profile.jpg" />
+    <Content Include="Images\Start_Background.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
     <Content Include="Scripts\MenuScript.js" />
+    <Content Include="Scripts\StartScript.js" />
     <Content Include="Start.aspx" />
     <Content Include="Styles\MenuStyle.css" />
     <Content Include="UserControls\UserControl_Header.ascx" />
     <Content Include="UserControls\UserControl_Labs.ascx" />
     <Content Include="UserControls\UserControl_Menu.ascx" />
+    <Content Include="UserControls\UserControl_PasswordChange.ascx" />
+    <Content Include="UserControls\UserControl_PersonalInformation.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +162,20 @@
     </Compile>
     <Compile Include="UserControls\UserControl_Menu.ascx.designer.cs">
       <DependentUpon>UserControl_Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_PasswordChange.ascx.cs">
+      <DependentUpon>UserControl_PasswordChange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_PasswordChange.ascx.designer.cs">
+      <DependentUpon>UserControl_PasswordChange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_PersonalInformation.ascx.cs">
+      <DependentUpon>UserControl_PersonalInformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_PersonalInformation.ascx.designer.cs">
+      <DependentUpon>UserControl_PersonalInformation.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
