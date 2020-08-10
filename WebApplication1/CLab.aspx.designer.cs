@@ -7,45 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1.UserControls {
+namespace WebApplication1 {
     
     
-    public partial class UserControl_Header {
+    public partial class CLab {
         
         /// <summary>
-        /// Image1 control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// TextBox_Search control.
+        /// UserControl_Header control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_Search;
+        protected global::WebApplication1.UserControls.UserControl_Header UserControl_Header;
         
         /// <summary>
-        /// LinkButton_Search control.
+        /// UserControl_News control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton_Search;
+        protected global::WebApplication1.UserControls.UserControl_News UserControl_News;
         
         /// <summary>
-        /// LinkButton_Login control.
+        /// UserControl_Labs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LinkButton_Login;
+        protected global::WebApplication1.UserControls.UserControl_Labs UserControl_Labs;
     }
 }

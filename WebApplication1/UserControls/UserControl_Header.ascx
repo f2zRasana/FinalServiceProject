@@ -3,7 +3,7 @@
 <div class="row" style="direction: rtl; font-family: 'B Mitra';">
     <%-- Header Image --%>
     <div class="col-12 col-sm-12 col-md-2 col-lg-2 pull-right" style="text-align: right;">
-        <asp:Image ID="Image_HeaderLab" runat="server" ImageUrl="~/Images/9755310_erpLogo_sku_justTitle_Az.png" CssClass="" Style="margin-top: 16px; max-width: 300px; max-height: 42px;" />
+      <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("FilePathImage") %>' CssClass="" Style="margin-top: 16px; max-width: 300px; max-height: 42px;" />
     </div>
     <%-- Header Search Bar --%>
     <div class="col-9 col-sm-9 col-md-5 col-lg-5 pull-right" style="text-align: right;">
@@ -18,3 +18,7 @@
     <script src="../Scripts/jquery-3.5.1.min.js"></script>
 
 </div>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />

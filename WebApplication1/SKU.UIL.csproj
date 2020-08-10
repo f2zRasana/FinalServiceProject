@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -95,6 +96,7 @@
     <Content Include="bootstrap-4.3.1\js\bootstrap.bundle.min.js" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.js" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.min.js" />
+    <Content Include="CLab.aspx" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\9755310_erpLogo_sku_justTitle_Az.png" />
@@ -115,11 +117,19 @@
     <Content Include="UserControls\UserControl_Header.ascx" />
     <Content Include="UserControls\UserControl_Labs.ascx" />
     <Content Include="UserControls\UserControl_Menu.ascx" />
+    <Content Include="UserControls\UserControl_News.ascx" />
     <Content Include="UserControls\UserControl_PasswordChange.ascx" />
     <Content Include="UserControls\UserControl_PersonalInformation.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLab.aspx.cs">
+      <DependentUpon>CLab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CLab.aspx.designer.cs">
+      <DependentUpon>CLab.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,6 +172,12 @@
     </Compile>
     <Compile Include="UserControls\UserControl_Menu.ascx.designer.cs">
       <DependentUpon>UserControl_Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_News.ascx.cs">
+      <DependentUpon>UserControl_News.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_News.ascx.designer.cs">
+      <DependentUpon>UserControl_News.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_PasswordChange.ascx.cs">
       <DependentUpon>UserControl_PasswordChange.ascx</DependentUpon>
