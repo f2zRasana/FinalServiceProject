@@ -153,7 +153,6 @@
     <Content Include="UserControls\UserControl_Header.ascx" />
     <Content Include="UserControls\UserControl_LabMenu.ascx" />
     <Content Include="UserControls\UserControl_Labs.ascx" />
-    <Content Include="UserControls\UserControl_Menu.ascx" />
     <Content Include="UserControls\UserControl_News.ascx" />
     <Content Include="UserControls\UserControl_PasswordChange.ascx" />
     <Content Include="UserControls\UserControl_PersonalInformation.ascx" />
@@ -230,13 +229,6 @@
     </Compile>
     <Compile Include="UserControls\UserControl_Labs.ascx.designer.cs">
       <DependentUpon>UserControl_Labs.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UserControl_Menu.ascx.cs">
-      <DependentUpon>UserControl_Menu.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserControl_Menu.ascx.designer.cs">
-      <DependentUpon>UserControl_Menu.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_News.ascx.cs">
       <DependentUpon>UserControl_News.ascx</DependentUpon>
