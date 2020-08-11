@@ -28,5 +28,10 @@ namespace SKU.BLL.Labs
             return labDao.SelectAllWithPaging(pageIndex, pageSize, out total);
         }
 
+        public List<Lab> SelectAllLab()
+        {
+            LabDao labDao = new LabDao();
+            return labDao.SelectAllLab();
+        }
     }
 }

@@ -44,6 +44,7 @@
     <Compile Include="Labs\LabDao.cs" />
     <Compile Include="Newss\NewsDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refahies\RefPartsDao.cs" />
     <Compile Include="Users\UserDao.cs" />
   </ItemGroup>
   <ItemGroup />
