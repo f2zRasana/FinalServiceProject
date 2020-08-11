@@ -20,12 +20,12 @@ namespace WebApplication1
             {
                 if (Request.QueryString.Count > 0)
                 {
-                    UserEmail_HiddenField.Value = "n9.zahra";/*Request.QueryString["email"].ToString();*/
+                    UserEmail_HiddenField.Value = Request.QueryString["email"].ToString();
                     UserManager userManager = new UserManager();
                     if (!userManager.HaveAccess(UserEmail_HiddenField.Value))
                     {
-                        PersonalInformation(UserEmail_HiddenField.Value);
-                        sidebarMenu.Disabled = true;
+                        UserControl_PersonalInformation.Visible = true;
+                        UserControl_PersonalInformation.Email = UserEmail_HiddenField.Value;
                     }
                 }
             }

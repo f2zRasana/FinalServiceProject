@@ -38,5 +38,14 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl sidebarMenu;
+        
+        /// <summary>
+        /// UserControl_PersonalInformation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebApplication1.UserControls.UserControl_PersonalInformation UserControl_PersonalInformation;
     }
 }

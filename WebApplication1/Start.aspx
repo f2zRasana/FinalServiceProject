@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Start.aspx.cs" Inherits="WebApplication1.Start" %>
 
+<%@ Register Src="~/UserControls/UserControl_PersonalInformation.ascx" TagPrefix="sku" TagName="UserControl_PersonalInformation" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -98,7 +100,7 @@
                 </div>
                 <%-- Dynamic Content of Sidebar Menu --%>
                 <div id="dynamicContent" class="col-12 col-sm-12 col-md-12 col-lg-12" style="overflow-x:hidden; overflow-y: scroll; height:550px;">
-                        <%--<img src="Images/2.jpg" />--%>
+                        <sku:UserControl_PersonalInformation runat="server" ID="UserControl_PersonalInformation" Visible="false" />
                 </div>
             </div>
         </div>
@@ -111,21 +113,21 @@
         window.addEventListener("resize", function () {
             var sizeResponse = $("body").width();
             if ($("#menu-content").is(":visible")) {
-                if (sizeResponse >= 992) {                                 //lg
+                if (sizeResponse >= 992) {                                                      //lg
                     if ($('#dynamicContent').hasClass('col-lg-12')) {
                         $('#dynamicContent').removeClass('col-lg-12');
                         $('#dynamicContent').addClass('col-lg-10');
                     }
                     $('#dynamicContent').css('margin-top', 0);
-                } else if (sizeResponse >= 768) {    //md
+                } else if (sizeResponse >= 768) {                                               //md
                     if ($('#dynamicContent').hasClass('col-md-12')) {
                         $('#dynamicContent').removeClass('col-md-12');
                         $('#dynamicContent').addClass('col-md-10');
                     }
                     $('#dynamicContent').css('margin-top', 0);
-                } else if (sizeResponse >= 576) {     //sm
+                } else if (sizeResponse >= 576) {                                               //sm
                     $('#dynamicContent').css('margin-top', $('#menu-content').height()+10);
-                } else if (sizeResponse < 576) {                            //xs
+                } else if (sizeResponse < 576) {                                                //xs
                     $('#dynamicContent').css('margin-top', $('#menu-content').height()+10);
                 }
             }

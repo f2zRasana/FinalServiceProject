@@ -55,7 +55,7 @@
                             <div class="input-group-append">
                                 <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #52517b; color: white; border-color: #52517b;">کلمه عبور</span>
                             </div>
-                            <asp:TextBox ID="Password_TextBox" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                            <asp:TextBox ID="Password_TextBox" TextMode="Password" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
                         </div>
                         <%-- CheckBox field --%>
                         <div class="input-group mb-3" style="direction: rtl;">

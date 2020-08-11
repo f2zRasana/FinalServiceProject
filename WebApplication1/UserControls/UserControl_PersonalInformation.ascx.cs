@@ -20,43 +20,100 @@ namespace WebApplication1.UserControls
                 Email_TextBox.Text = Email;
                 UserManager userManager = new UserManager();
                 User user = userManager.SelectUser(Email);
-                if (user.Name != "")
+                if (user.Name != null)
                     Name_TextBox.Text = user.Name;
-                if (user.Family != "")
+                if (user.Family != null)
                     Family_TextBox.Text = user.Family;
-                if (user.Father != "")
+                if (user.Father != null)
                     Father_TextBox.Text = user.Father;
-                if (user.Mobile.ToString() != "")
+                if (user.Mobile != 0)
                     Mobile_TextBox.Text = user.Mobile.ToString();
-                if (user.Address != "")
+                if (user.Address != null)
                     Address_TextBox.Text = user.Address;
-                if (user.Education != "")
+                if (user.Education != null)
                     Education_TextBox.Text = user.Education;
-                if (user.PostalCard.ToString() != "")
+                if (user.PostalCard != 0)
                     PostalCard_TextBox.Text = user.PostalCard.ToString();
-                if (user.City != "")
+                if (user.City != null)
                     City_TextBox.Text = user.City;
-                if (user.UserType != "")
-                    UserType_TextBox.Text = user.UserType;
-                if (user.PersonType != "")
-                    PersonType_TextBox.Text = user.PersonType;
-                if (user.Employment != "")
-                    Employment_TextBox.Text = user.Employment;
-                if (user.Birth.ToLongDateString() != "")
+                switch (user.UserType)
+                {
+                    case "student":
+                        UserType_DropDownList.Items[1].Selected = true;
+                        break;
+                    case "employee":
+                        UserType_DropDownList.Items[2].Selected = true;
+                        break;
+                    case "faculty":
+                        UserType_DropDownList.Items[3].Selected = true;
+                        break;
+                    case "corporative":
+                        UserType_DropDownList.Items[4].Selected = true;
+                        break;
+                    case "retired":
+                        UserType_DropDownList.Items[5].Selected = true;
+                        break;
+                    case "other":
+                        UserType_DropDownList.Items[6].Selected = true;
+                        break;
+                    default:
+                        UserType_DropDownList.Items[0].Selected = true;
+                        break;
+                }
+                switch (user.PersonType)
+                {
+                    case "natural":
+                        PersonType_DropDownList.Items[1].Selected = true;
+                        break;
+                    case "juridical":
+                        PersonType_DropDownList.Items[2].Selected = true;
+                        break;
+                    default:
+                        PersonType_DropDownList.Items[0].Selected = true;
+                        break;
+                }
+                switch (user.Employment)
+                {
+                    case "permanent":
+                        Employment_DropDownList.Items[1].Selected = true;
+                        break;
+                    case "conventional":
+                        Employment_DropDownList.Items[2].Selected = true;
+                        break;
+                    case "contractual":
+                        Employment_DropDownList.Items[2].Selected = true;
+                        break;
+                    default:
+                        Employment_DropDownList.Items[0].Selected = true;
+                        break;
+                }
+                if (user.Birth != null)
                     Birth_TextBox.Text = user.Birth.ToLongDateString();
-                if (user.Country != "")
-                    Country_TextBox.Text = user.Country;
-                if (user.NationalCode.ToString() != "")
+                switch (user.Country)
+                {
+                    case "iran":
+                        Country_DropDownList.Items[1].Selected = true;
+                        break;
+                    case "other":
+                        Country_DropDownList.Items[2].Selected = true;
+                        break;
+                    default:
+                        Country_DropDownList.Items[0].Selected = true;
+                        break;
+                }
+                if (user.NationalCode != 0)
                     NationalCode_TextBox.Text = user.NationalCode.ToString();
-                if (user.Gender.ToString() != "")
-                    Gender_TextBox.Text = user.Gender.ToString();
-                if (user.Organization != "")
+                if (user.Gender == true)
+                    Gender_DropDownList.Items[1].Selected = true;
+                else
+                    Gender_DropDownList.Items[0].Selected = true;
+                if (user.Organization != null)
                     Organization_TextBox.Text = user.Organization;
-                if (user.Phone.ToString() != "")
+                if (user.Phone != 0)
                     Phone_TextBox.Text = user.Phone.ToString();
-                if (user.Site != "")
+                if (user.Site != null)
                     Site_TextBox.Text = user.Site;
-                if (user.Photo != "")
+                if (user.Photo != null)
                     Photo_TextBox.Text = user.Photo;
 
             }

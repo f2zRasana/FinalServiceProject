@@ -77,21 +77,38 @@
                     <div class="input-group-append">
                         <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">نوع کاربری :</span>
                     </div>
-                    <asp:TextBox ID="UserType_TextBox" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                    <asp:DropDownList ID="UserType_DropDownList" CssClass="browser-default custom-select" runat="server" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px">
+                        <asp:ListItem Value="choose">انتخاب کنید</asp:ListItem>
+                        <asp:ListItem Value="student">دانشجو</asp:ListItem>
+                        <asp:ListItem Value="employee">کارمند</asp:ListItem>
+                        <asp:ListItem Value="faculty">استاد (هیات علمی)</asp:ListItem>
+                        <asp:ListItem Value="corporative">شرکتی</asp:ListItem>
+                        <asp:ListItem Value="retired">بازنشسته</asp:ListItem>
+                        <asp:ListItem Value="other">سایر</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
                 <%-- نوع شخص --%>
                 <div class="input-group mb-3" style="font-size: larger;">
                     <div class="input-group-append">
                         <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">نوع شخص :</span>
                     </div>
-                    <asp:TextBox ID="PersonType_TextBox" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                    <asp:DropDownList ID="PersonType_DropDownList" CssClass="browser-default custom-select" runat="server" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px">
+                        <asp:ListItem Value="choose">انتخاب کنید</asp:ListItem>
+                        <asp:ListItem Value="natural">حقیقی</asp:ListItem>
+                        <asp:ListItem Value="juridical">حقوقی</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
                 <%-- نوع استخدام --%>
                 <div class="input-group mb-3" style="font-size: larger;">
                     <div class="input-group-append">
                         <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">نوع استخدام :</span>
                     </div>
-                    <asp:TextBox ID="Employment_TextBox" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                    <asp:DropDownList ID="Employment_DropDownList" CssClass="browser-default custom-select" runat="server" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px">
+                        <asp:ListItem Value="choose">انتخاب کنید</asp:ListItem>
+                        <asp:ListItem Value="permanent">رسمی</asp:ListItem>
+                        <asp:ListItem Value="conventional">قراردادی</asp:ListItem>
+                        <asp:ListItem Value="contractual">پیمانی</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
             </div>
             <%-- left side --%>
@@ -108,7 +125,11 @@
                     <div class="input-group-append">
                         <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">کشور :</span>
                     </div>
-                    <asp:TextBox ID="Country_TextBox" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                    <asp:DropDownList ID="Country_DropDownList" CssClass="browser-default custom-select" runat="server" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px">
+                        <asp:ListItem Value="choose">انتخاب کنید</asp:ListItem>
+                        <asp:ListItem Value="iran">ایران</asp:ListItem>
+                        <asp:ListItem Value="other">سایر</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
                 <%-- کد ملی --%>
                 <div class="input-group mb-3" style="font-size: larger;">
@@ -122,7 +143,10 @@
                     <div class="input-group-append">
                         <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">جنسیت :</span>
                     </div>
-                    <asp:TextBox ID="Gender_TextBox" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                    <asp:DropDownList ID="Gender_DropDownList" CssClass="browser-default custom-select" runat="server" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px">
+                        <asp:ListItem Value="0">زن</asp:ListItem>
+                        <asp:ListItem Value="1">مرد</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
                 <%-- نام سازمان --%>
                 <div class="input-group mb-3" style="font-size: larger;">
@@ -157,6 +181,7 @@
                     <div class="input-group-append">
                         <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">عکس :</span>
                     </div>
+                    <%--<asp:Image ID="Photo_Image" runat="server"  />--%>
                     <asp:TextBox ID="Photo_TextBox" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
                 </div>
             </div>
@@ -164,7 +189,8 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-right: 10px; padding-top: 5px; text-align: center;">
             <p style="color: #206BA4"></p>
             <p>
-                <button type="button" class="btn btn-outline-secondary rounded-pill"><asp:Label ID="LinkButton_Submit" runat="server">ثبت اطلاعات</asp:Label></button>
+                <button type="button" class="btn btn-outline-secondary rounded-pill">
+                    <asp:Label ID="LinkButton_Submit" runat="server">ثبت اطلاعات</asp:Label></button>
             </p>
         </div>
     </div>

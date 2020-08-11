@@ -85,31 +85,31 @@ namespace WebApplication1.UserControls {
         protected global::System.Web.UI.WebControls.TextBox City_TextBox;
         
         /// <summary>
-        /// UserType_TextBox control.
+        /// UserType_DropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UserType_TextBox;
+        protected global::System.Web.UI.WebControls.DropDownList UserType_DropDownList;
         
         /// <summary>
-        /// PersonType_TextBox control.
+        /// PersonType_DropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PersonType_TextBox;
+        protected global::System.Web.UI.WebControls.DropDownList PersonType_DropDownList;
         
         /// <summary>
-        /// Employment_TextBox control.
+        /// Employment_DropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Employment_TextBox;
+        protected global::System.Web.UI.WebControls.DropDownList Employment_DropDownList;
         
         /// <summary>
         /// Birth_TextBox control.
@@ -121,13 +121,13 @@ namespace WebApplication1.UserControls {
         protected global::System.Web.UI.WebControls.TextBox Birth_TextBox;
         
         /// <summary>
-        /// Country_TextBox control.
+        /// Country_DropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Country_TextBox;
+        protected global::System.Web.UI.WebControls.DropDownList Country_DropDownList;
         
         /// <summary>
         /// NationalCode_TextBox control.
@@ -139,13 +139,13 @@ namespace WebApplication1.UserControls {
         protected global::System.Web.UI.WebControls.TextBox NationalCode_TextBox;
         
         /// <summary>
-        /// Gender_TextBox control.
+        /// Gender_DropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Gender_TextBox;
+        protected global::System.Web.UI.WebControls.DropDownList Gender_DropDownList;
         
         /// <summary>
         /// Organization_TextBox control.
