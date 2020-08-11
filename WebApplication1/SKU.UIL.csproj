@@ -156,6 +156,7 @@
     <Content Include="UserControls\UserControl_Footer.ascx" />
     <Content Include="UserControls\UserControl_Header.ascx" />
     <Content Include="UserControls\UserControl_Labs.ascx" />
+    <Content Include="UserControls\UserControl_MainMenu.ascx" />
     <Content Include="UserControls\UserControl_News.ascx" />
     <Content Include="UserControls\UserControl_PasswordChange.ascx" />
     <Content Include="UserControls\UserControl_PersonalInformation.ascx" />
@@ -228,6 +229,12 @@
     </Compile>
     <Compile Include="UserControls\UserControl_Labs.ascx.designer.cs">
       <DependentUpon>UserControl_Labs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_MainMenu.ascx.cs">
+      <DependentUpon>UserControl_MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_MainMenu.ascx.designer.cs">
+      <DependentUpon>UserControl_MainMenu.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_News.ascx.cs">
       <DependentUpon>UserControl_News.ascx</DependentUpon>
