@@ -5,7 +5,7 @@
 <%@ Register Src="~/UserControls/UserControl_News.ascx" TagPrefix="SKU" TagName="UserControl_News" %>
 <%@ Register Src="~/UserControls/UserControl_Footer.ascx" TagPrefix="SKU" TagName="UserControl_Footer" %>
 <%@ Register Src="~/UserControls/UserControl_CLabSlider.ascx" TagPrefix="SKU" TagName="UserControl_CLabSlider" %>
-<%@ Register Src="~/UserControls/UserControl_CLabMenu.ascx" TagPrefix="SKU" TagName="UserControl_CLabMenu" %>
+
 
 
 
@@ -22,7 +22,7 @@
     <form id="form1" runat="server">
     <div>
         <SKU:UserControl_Header runat="server" id="UserControl_Header" ></SKU:UserControl_Header>
-        <SKU:UserControl_CLabMenu runat="server" id="UserControl_CLabMenu" ></SKU:UserControl_CLabMenu>
+        
         <SKU:UserControl_CLabSlider runat="server" ID="UserControl_CLabSlider" ></SKU:UserControl_CLabSlider>
         <SKU:UserControl_News runat="server" id="UserControl_News" ></SKU:UserControl_News>
         <SKU:UserControl_Labs runat="server" id="UserControl_Labs" ></SKU:UserControl_Labs>

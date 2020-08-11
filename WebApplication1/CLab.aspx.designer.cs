@@ -31,15 +31,6 @@ namespace WebApplication1 {
         protected global::WebApplication1.UserControls.UserControl_Header UserControl_Header;
         
         /// <summary>
-        /// UserControl_CLabMenu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::WebApplication1.UserControls.UserControl_CLabMenu UserControl_CLabMenu;
-        
-        /// <summary>
         /// UserControl_CLabSlider control.
         /// </summary>
         /// <remarks>

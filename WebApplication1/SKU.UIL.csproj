@@ -155,7 +155,6 @@
     <Content Include="Scripts\StartScript.js" />
     <Content Include="Start.aspx" />
     <Content Include="Styles\MenuStyle.css" />
-    <Content Include="UserControls\UserControl_CLabMenu.ascx" />
     <Content Include="UserControls\UserControl_CLabSlider.ascx" />
     <Content Include="UserControls\UserControl_Footer.ascx" />
     <Content Include="UserControls\UserControl_Header.ascx" />
@@ -203,13 +202,6 @@
     </Compile>
     <Compile Include="Start.aspx.designer.cs">
       <DependentUpon>Start.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UserControl_CLabMenu.ascx.cs">
-      <DependentUpon>UserControl_CLabMenu.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserControl_CLabMenu.ascx.designer.cs">
-      <DependentUpon>UserControl_CLabMenu.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_CLabSlider.ascx.cs">
       <DependentUpon>UserControl_CLabSlider.ascx</DependentUpon>
