@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1.UserControls
 {
-    public partial class UserControl_Menu : System.Web.UI.UserControl
+    public partial class UserControl_RefMenu : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

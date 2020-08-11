@@ -11,7 +11,7 @@ namespace WebApplication1.UserControls
 {
 
 
-    public partial class UserControl_Menu
+    public partial class UserControl_RefMenu
     {
     }
 }

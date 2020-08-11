@@ -1,4 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserControl_CLabMenu.ascx.cs" Inherits="WebApplication1.UserControls.UserControl_CLabMenu" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserControl_Menu.ascx.cs" Inherits="WebApplication1.UserControls.UserControl_Menu" %>
+
+
 <style>
     .menu li:hover {
         background-color: #ef5661;
@@ -156,9 +158,7 @@
     </nav>
     
 </div>
-<%--  --%>
-<link href="../Styles/MenuStyle.css" rel="stylesheet" />
-<link href="../bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<%-- ********************************************************************** --%>
 
 <script src="../Scripts/jquery-3.5.1.min.js"></script>
 
