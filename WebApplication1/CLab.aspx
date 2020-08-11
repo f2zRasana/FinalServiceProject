@@ -3,6 +3,7 @@
 <%@ Register Src="~/UserControls/UserControl_Header.ascx" TagPrefix="SKU" TagName="UserControl_Header" %>
 <%@ Register Src="~/UserControls/UserControl_Labs.ascx" TagPrefix="SKU" TagName="UserControl_Labs" %>
 <%@ Register Src="~/UserControls/UserControl_News.ascx" TagPrefix="SKU" TagName="UserControl_News" %>
+<%@ Register Src="~/UserControls/UserControl_Footer.ascx" TagPrefix="SKU" TagName="UserControl_Footer" %>
 
 
 
@@ -19,6 +20,7 @@
         <SKU:UserControl_Header runat="server" id="UserControl_Header" ></SKU:UserControl_Header>
         <SKU:UserControl_News runat="server" id="UserControl_News" ></SKU:UserControl_News>
         <SKU:UserControl_Labs runat="server" id="UserControl_Labs" ></SKU:UserControl_Labs>
+        <SKU:UserControl_Footer runat="server" id="UserControl_Footer" />
 
     </div>
     </form>

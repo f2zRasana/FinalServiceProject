@@ -47,5 +47,14 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::WebApplication1.UserControls.UserControl_Labs UserControl_Labs;
+        
+        /// <summary>
+        /// UserControl_Footer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebApplication1.UserControls.UserControl_Footer UserControl_Footer;
     }
 }
