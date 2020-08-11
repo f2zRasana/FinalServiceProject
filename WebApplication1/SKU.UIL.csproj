@@ -97,11 +97,8 @@
     <Content Include="bootstrap-4.3.1\js\bootstrap.js" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.min.js" />
     <Content Include="CLab.aspx" />
-    <Content Include="Images\1.jpg" />
-    <Content Include="Images\2.jpg" />
     <Content Include="Images\7888256_erpLogo_sku_justTitle_ref.png" />
     <Content Include="Images\9755310_erpLogo_sku_justTitle_Az.png" />
-    <Content Include="Images\Asset 3.png" />
     <Content Include="Images\Carousel_R2786274.jpg" />
     <Content Include="Images\Carousel_R5789027.jpg" />
     <Content Include="Images\CLab_Images\1-11-R1171356.jpg" />
