@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SKU.BLL.HeaderImages;
+using SKU.Entities.HeaderImages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,10 @@ namespace WebApplication1.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string title = Request.Url.Segments.Last();
+            HeaderImageManager headerImageManager = new HeaderImageManager();
+            HeaderImage headerImage = headerImageManager.GetImage(title);
+            Image_Header.ImageUrl = headerImage.FilePathImage;
         }
     }
 }

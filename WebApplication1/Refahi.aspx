@@ -24,5 +24,10 @@
         <SKU:UserControl_Footer runat="server" id="UserControl_Footer" ></SKU:UserControl_Footer>
     </div>
     </form>
+     <link href="bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="Scripts/jquery-3.5.1.min.js"></script>
+
+    <script src="bootstrap-4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

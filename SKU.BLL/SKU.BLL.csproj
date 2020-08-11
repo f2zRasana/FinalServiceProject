@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HeaderImages\HeaderImageManager.cs" />
     <Compile Include="Labs\LabManager.cs" />
+    <Compile Include="Newss\NewsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\UserManager.cs" />
   </ItemGroup>
@@ -54,5 +56,6 @@
       <Name>SKU.Entities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

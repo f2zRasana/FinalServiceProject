@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HeaderImages\HeaderImage.cs" />
     <Compile Include="Labs\Lab.cs" />
+    <Compile Include="Newss\News.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\User.cs" />
   </ItemGroup>

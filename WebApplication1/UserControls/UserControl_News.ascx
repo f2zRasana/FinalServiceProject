@@ -25,7 +25,14 @@
 </style>
 
 <%--/******************************************--%>
+
 <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: right; margin-bottom: 25px; margin-top: 20px;">
+    <span class="label-news" style="border-bottom: 3px solid #e75460; padding-bottom: 10px; font-family: 'B Mitra'; direction: rtl;"><strong>خبرها</strong></span>
+
+</div>
+<br />
+<br />
     <div class="row" style="direction:rtl !important">
     <div class="col-sm-12 col-md-3 col-lg-3"style="margin-right:10px;text-align:right;">
  <asp:DataList ID="ListNews"  runat="server" CellSpacing="0" CellPadding="1" Style="font-family: 'B Mitra'; direction: rtl;" RepeatColumns="3" RepeatLayout="Flow" DataKeyField="ID" RepeatDirection="Horizontal" >

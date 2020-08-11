@@ -1,6 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserControl_Menu.ascx.cs" Inherits="WebApplication1.UserControls.UserControl_Menu" %>
-
-
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserControl_CLabMenu.ascx.cs" Inherits="WebApplication1.UserControls.UserControl_CLabMenu" %>
 <style>
     .menu li:hover {
         background-color: #ef5661;
@@ -9,6 +7,7 @@
     .hover-submenu a:hover {
         background-color: #ef5661;
         color:white;
+
     }
 </style>
 
@@ -115,24 +114,58 @@
                         </li>
                     </ul>
                 </li>
+                <%-- دانشکده علوم پایه --%>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">دانشکده علوم پایه</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">دانشکده منابع طبیعی و علوم زمین</a>
+                <%-- پژوهشکده ها --%>
+                 <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">پژوهشکده ها
+                    </a>
+                    <ul class="dropdown-menu dropleft hover-submenu" aria-labelledby="navbarDropdownMenuLink" style="text-align: right;">
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">پژوهشکده نانو</a>
+                            <ul class="dropdown-menu" style="text-align: right;">
+                                <li><a class="dropdown-item" href="#">آزمایشگاه پژوهشکده فناوری نانو</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">پژوهشکده زیست فناوری</a>
+                            <ul class="dropdown-menu" style="text-align: right;">
+                                <li><a class="dropdown-item" href="#"> Real-time PCR</a></li>
+                                 <li><a class="dropdown-item" href="#"> Nanodrop array spectrophotometer</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">پژوهشکده فناوری جنین دام</a>
+                          <%--  <ul class="dropdown-menu" style="text-align: right;">
+                                <li><a class="dropdown-item" href="#">آزمایشگاه فیزیولوژی و فارماکولوژی</a></li>
+                            </ul>--%>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">مرکز تحقیقات منابع آب </a>
+                            <%--<ul class="dropdown-menu" style="text-align: right;">
+                                <li><a class="dropdown-item" href="#">آزمایشگاه فیزیولوژی و فارماکولوژی</a></li>
+                            </ul>--%>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">دانشکده هنر وعلوم انسانی فارسان</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">دانشکده ادبیات و علوم انسانی</a>
-                </li>
+              
             </ul>
         </div>
     </nav>
+    
 </div>
-<%-- ********************************************************************** --%>
+<%--  --%>
+<link href="../Styles/MenuStyle.css" rel="stylesheet" />
+<link href="../bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
 
 <script src="../Scripts/jquery-3.5.1.min.js"></script>
+
+<script src="../bootstrap-4.3.1/js/bootstrap.min.js"></script>
 <script src="../Scripts/MenuScript.js"></script>
-<link href="../Styles/MenuStyle.css" rel="stylesheet" />
+<%--
+
+
+
+--%>

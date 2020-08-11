@@ -29,23 +29,5 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::WebApplication1.UserControls.UserControl_Header UserControl_Header;
-        
-        /// <summary>
-        /// UserControl_Menu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::WebApplication1.UserControls.UserControl_Menu UserControl_Menu;
-        
-        /// <summary>
-        /// UserControl_Labs control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::WebApplication1.UserControls.UserControl_Labs UserControl_Labs;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SKU.BLL.Newss;
+using SKU.Entities.Newss;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,21 @@ namespace WebApplication1.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                string pageName = Request.Url.Segments.Last();
+                NewsManager newsManager = new NewsManager();
+                List<News> allNews = newsManager.GetNews(pageName);
 
+                for (int i = 0; i < allNews.Count; i++)
+                {
+                    if (allNews[i].FilePathImage == null)
+                        allNews[i].FilePathImage = " ";
+                }
+
+                ListNews.DataSource = allNews;
+                ListNews.DataBind();
+            }
         }
     }
 }

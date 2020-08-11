@@ -99,6 +99,7 @@
     <Content Include="CLab.aspx" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.jpg" />
+    <Content Include="Images\7888256_erpLogo_sku_justTitle_ref.png" />
     <Content Include="Images\9755310_erpLogo_sku_justTitle_Az.png" />
     <Content Include="Images\Asset 3.png" />
     <Content Include="Images\Carousel_R2786274.jpg" />
@@ -132,10 +133,16 @@
     <Content Include="Images\CLab_Images\1-7-R6178578.jpg" />
     <Content Include="Images\CLab_Images\1-8-R6117619.png" />
     <Content Include="Images\CLab_Images\white.jpg" />
+    <Content Include="Images\erpLogo.png" />
     <Content Include="Images\Login_PageBackground.gif" />
     <Content Include="Images\Login_Profile.png" />
     <Content Include="Images\Login_Schedule.png" />
     <Content Include="Images\Login_SkuLogo.png" />
+    <Content Include="Images\News_R2752446.png" />
+    <Content Include="Images\News_R3079957.jpg" />
+    <Content Include="Images\News_R5859223.jpg" />
+    <Content Include="Images\News_R7476528.jpg" />
+    <Content Include="Images\News_R9462748.jpg" />
     <Content Include="Images\profile.jpg" />
     <Content Include="Images\Refahi_Images\4-158-R6111555.jpg" />
     <Content Include="Images\Refahi_Images\white.jpg" />
@@ -148,11 +155,11 @@
     <Content Include="Scripts\StartScript.js" />
     <Content Include="Start.aspx" />
     <Content Include="Styles\MenuStyle.css" />
+    <Content Include="UserControls\UserControl_CLabMenu.ascx" />
     <Content Include="UserControls\UserControl_CLabSlider.ascx" />
     <Content Include="UserControls\UserControl_Footer.ascx" />
     <Content Include="UserControls\UserControl_Header.ascx" />
     <Content Include="UserControls\UserControl_Labs.ascx" />
-    <Content Include="UserControls\UserControl_Menu.ascx" />
     <Content Include="UserControls\UserControl_News.ascx" />
     <Content Include="UserControls\UserControl_PasswordChange.ascx" />
     <Content Include="UserControls\UserControl_PersonalInformation.ascx" />
@@ -197,14 +204,23 @@
     <Compile Include="Start.aspx.designer.cs">
       <DependentUpon>Start.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl_CLabMenu.ascx.cs">
+      <DependentUpon>UserControl_CLabMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_CLabMenu.ascx.designer.cs">
+      <DependentUpon>UserControl_CLabMenu.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl_CLabSlider.ascx.cs">
       <DependentUpon>UserControl_CLabSlider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControls\UserControl_CLabSlider.ascx.designer.cs">
       <DependentUpon>UserControl_CLabSlider.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_Footer.ascx.cs">
       <DependentUpon>UserControl_Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControls\UserControl_Footer.ascx.designer.cs">
       <DependentUpon>UserControl_Footer.ascx</DependentUpon>
@@ -223,15 +239,9 @@
     <Compile Include="UserControls\UserControl_Labs.ascx.designer.cs">
       <DependentUpon>UserControl_Labs.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControl_Menu.ascx.cs">
-      <DependentUpon>UserControl_Menu.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserControl_Menu.ascx.designer.cs">
-      <DependentUpon>UserControl_Menu.ascx</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UserControl_News.ascx.cs">
       <DependentUpon>UserControl_News.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControls\UserControl_News.ascx.designer.cs">
       <DependentUpon>UserControl_News.ascx</DependentUpon>
@@ -252,12 +262,14 @@
     </Compile>
     <Compile Include="UserControls\UserControl_RefahiPart.ascx.cs">
       <DependentUpon>UserControl_RefahiPart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControls\UserControl_RefahiPart.ascx.designer.cs">
       <DependentUpon>UserControl_RefahiPart.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_RefahiSlider.ascx.cs">
       <DependentUpon>UserControl_RefahiSlider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControls\UserControl_RefahiSlider.ascx.designer.cs">
       <DependentUpon>UserControl_RefahiSlider.ascx</DependentUpon>
