@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication1.WebForm1" %>
 
-<%@ Register Src="~/UserControls/UserControl_ClabMenu.ascx" TagPrefix="uc1" TagName="UserControl_ClabMenu" %>
+<%@ Register Src="~/UserControls/UserControl_SendMessage.ascx" TagPrefix="uc1" TagName="UserControl_SendMessage" %>
+
 
 <!DOCTYPE html>
 
@@ -11,8 +12,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <uc1:UserControl_ClabMenu runat="server" id="UserControl_ClabMenu" />
-
+            <uc1:UserControl_SendMessage runat="server" id="UserControl_SendMessage" />
         </div>
     </form>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
