@@ -151,6 +151,7 @@
     <Content Include="UserControls\UserControl_CLabSlider.ascx" />
     <Content Include="UserControls\UserControl_Footer.ascx" />
     <Content Include="UserControls\UserControl_Header.ascx" />
+    <Content Include="UserControls\UserControl_LabMenu.ascx" />
     <Content Include="UserControls\UserControl_Labs.ascx" />
     <Content Include="UserControls\UserControl_Menu.ascx" />
     <Content Include="UserControls\UserControl_News.ascx" />
@@ -215,6 +216,12 @@
     </Compile>
     <Compile Include="UserControls\UserControl_Header.ascx.designer.cs">
       <DependentUpon>UserControl_Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_LabMenu.ascx.cs">
+      <DependentUpon>UserControl_LabMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_LabMenu.ascx.designer.cs">
+      <DependentUpon>UserControl_LabMenu.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_Labs.ascx.cs">
       <DependentUpon>UserControl_Labs.ascx</DependentUpon>
