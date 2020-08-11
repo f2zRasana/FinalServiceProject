@@ -159,6 +159,7 @@
     <Content Include="UserControls\UserControl_PersonalInformation.ascx" />
     <Content Include="UserControls\UserControl_RefahiPart.ascx" />
     <Content Include="UserControls\UserControl_RefahiSlider.ascx" />
+    <Content Include="UserControls\UserControl_RefMenu.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -268,6 +269,12 @@
     </Compile>
     <Compile Include="UserControls\UserControl_RefahiSlider.ascx.designer.cs">
       <DependentUpon>UserControl_RefahiSlider.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_RefMenu.ascx.cs">
+      <DependentUpon>UserControl_RefMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_RefMenu.ascx.designer.cs">
+      <DependentUpon>UserControl_RefMenu.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
