@@ -33,19 +33,31 @@ namespace WebApplication1.UserControls
                         allLabs[i].Item6 = " ";
                     if (allLabs[i].Item7 == null)
                         allLabs[i].Item7 = " ";
-                    if (allLabs[i].Item8 == null)
-                        allLabs[i].Item8 = " ";
+
                 }
                 ListLabs.DataSource = allLabs;
                 ListLabs.DataBind();
             }
-            
+
         }
 
-        
+
         protected void ListLabs_ItemDataBound(object sender, DataListItemEventArgs e)
         {
-            
+
+            for (int i = 1; i < 8; i++)
+            {
+
+                if (((Label)e.Item.FindControl("Label" + i.ToString())).Text == " ")
+                {
+                    ((Label)e.Item.FindControl("Label_" + i.ToString())).Visible = false;
+                }
+
+
+
+
+
+            }
         }
     }
 }

@@ -17,7 +17,7 @@ namespace SKU.DAO.Labs
 
             // 1. Make A New Connection
             SqlConnection sqlConnection = new SqlConnection
-                ("Data Source=.;Initial Catalog=WebTest;User ID=Test;Password=123456");
+                ("Data Source =.; Initial Catalog = SKU; Integrated Security = true");
 
             // 2. Make A Command
             SqlCommand sqlCommand = sqlConnection.CreateCommand();
@@ -53,8 +53,7 @@ namespace SKU.DAO.Labs
                         tmpLab.Item6 = sqlDataReader.GetString(8);
                     if (sqlDataReader.IsDBNull(9) == false)
                         tmpLab.Item7 = sqlDataReader.GetString(9);
-                    if (sqlDataReader.IsDBNull(10) == false)
-                        tmpLab.Item8 = sqlDataReader.GetString(10);
+                    
                     allLabs.Add(tmpLab);
                 }
                 sqlConnection.Close();
@@ -65,6 +64,94 @@ namespace SKU.DAO.Labs
                 return null;
             }
             return allLabs;
+        }
+        public List<Lab> SelectAllWithPaging(int pageIndex, int pageSize, out int total)
+        {
+
+            List<Lab> allLab = new List<Lab>();
+            // 1. Make A New Connection
+            SqlConnection sqlConnection = new SqlConnection
+                ("Data Source=.;Initial Catalog=SKU;Integrated Security=true");
+
+            // 2. Make A Command
+            SqlCommand sqlCommand = sqlConnection.CreateCommand();
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.CommandText = "Lab_SelectAllWithPaging";
+            total = 0;
+
+            SqlParameter pageSizeParameter = sqlCommand.Parameters.Add("@pageSize", System.Data.SqlDbType.Int);
+            pageSizeParameter.Value = pageSize;
+            SqlParameter pageIndexParameter = sqlCommand.Parameters.Add("@pageIndex", System.Data.SqlDbType.Int);
+            pageIndexParameter.Value = pageIndex;
+
+            Lab tmpLab = null;
+            try
+            {
+                sqlConnection.Open();
+                // 3.Read Data
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    tmpLab = new Lab();
+                    tmpLab.ID = sqlDataReader.GetInt32(0);
+                    if (sqlDataReader.IsDBNull(1) == false)
+                        tmpLab.Title = "فرم استفاده از " + sqlDataReader.GetString(1);
+
+                    //if (sqlDataReader.IsDBNull(2) == false)
+                    //    tmpProfessor.ProfRank = sqlDataReader.GetString(2);
+
+                    total = sqlDataReader.GetInt32(2);
+                    allLab.Add(tmpLab);
+                }
+                sqlConnection.Close();
+            }
+            catch (SqlException sqlExeption)
+            {
+                sqlConnection.Close();
+                return null;
+            }
+            return allLab;
+        }
+
+        public List<Lab> SelectTitle()
+        {
+            List<Lab> titleLabs = new List<Lab>();
+
+            // 1. Make A New Connection
+            SqlConnection sqlConnection = new SqlConnection
+                ("Data Source=.;Initial Catalog=SKU;Integrated Security=true");
+
+            // 2. Make A Command
+            SqlCommand sqlCommand = sqlConnection.CreateCommand();
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.CommandText = "Lab_SelectAll";
+
+            Lab tmpLab = null;
+            try
+            {
+                sqlConnection.Open();
+                // 3.Read Data
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    tmpLab = new Lab();
+                    tmpLab.ID = sqlDataReader.GetInt32(0);
+                    if (sqlDataReader.IsDBNull(1) == false)
+                        tmpLab.Title = "فرم استفاده از " + sqlDataReader.GetString(1);
+
+                    titleLabs.Add(tmpLab);
+                }
+                sqlConnection.Close();
+            }
+            catch (SqlException sqlExeption)
+            {
+                sqlConnection.Close();
+                return null;
+            }
+            return titleLabs;
+
         }
     }
 }

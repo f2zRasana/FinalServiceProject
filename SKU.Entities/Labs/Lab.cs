@@ -18,6 +18,6 @@ namespace SKU.Entities.Labs
         public string Item5 { get; set; }
         public string Item6 { get; set; }
         public string Item7 { get; set; }
-        public string Item8 { get; set; }
+        
     }
 }
