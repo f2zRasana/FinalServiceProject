@@ -77,6 +77,7 @@
     <Content Include="bootstrap-4.3.1\js\bootstrap.bundle.min.js.map" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.js.map" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.min.js.map" />
+    <Content Include="WebForm1.aspx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -152,6 +153,7 @@
     <Content Include="Scripts\StartScript.js" />
     <Content Include="Start.aspx" />
     <Content Include="Styles\MenuStyle.css" />
+    <Content Include="UserControls\UserControl_ClabMenu.ascx" />
     <Content Include="UserControls\UserControl_CLabSlider.ascx" />
     <Content Include="UserControls\UserControl_Footer.ascx" />
     <Content Include="UserControls\UserControl_Header.ascx" />
@@ -201,6 +203,13 @@
     </Compile>
     <Compile Include="Start.aspx.designer.cs">
       <DependentUpon>Start.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_ClabMenu.ascx.cs">
+      <DependentUpon>UserControl_ClabMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_ClabMenu.ascx.designer.cs">
+      <DependentUpon>UserControl_ClabMenu.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_CLabSlider.ascx.cs">
       <DependentUpon>UserControl_CLabSlider.ascx</DependentUpon>
@@ -276,6 +285,13 @@
     </Compile>
     <Compile Include="UserControls\UserControl_RefMenu.ascx.designer.cs">
       <DependentUpon>UserControl_RefMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
