@@ -48,7 +48,7 @@
                             <div class="input-group-append">
                                 <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #52517b; color: white; border-color: #52517b;">نام کاربری</span>
                             </div>
-                            <asp:TextBox ID="Username_TextBox" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                            <asp:TextBox ID="Username_TextBox" TextMode="Email" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
                         </div>
                         <%-- Password field --%>
                         <div class="input-group mb-3">
@@ -113,20 +113,20 @@
                                 <div class="input-group-append">
                                     <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #52517b; color: white; border-color: #52517b;">نام کاربری (ایمیل)</span>
                                 </div>
-                                <asp:TextBox ID="NewUsername_TextBox" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                                <asp:TextBox ID="NewUsername_TextBox" TextMode="Email" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
                                     <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #52517b; color: white; border-color: #52517b;">کلمه عبور</span>
                                 </div>
-                                <asp:TextBox ID="NewPassword_TextBox" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                                <asp:TextBox ID="NewPassword_TextBox" TextMode="Password" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
 
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
                                     <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #52517b; color: white; border-color: #52517b;">تکرار کلمه عبور</span>
                                 </div>
-                                <asp:TextBox ID="NewPasswordRepeat_TextBox" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                                <asp:TextBox ID="NewPasswordRepeat_TextBox" TextMode="Password" runat="server" CssClass="form-control" placeholder="" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
 
                             </div>
                             <asp:Button ID="NewUser_Button" OnClick="NewUser_Button_Click" runat="server" Text="ایجاد کاربر جدید" CssClass="btn btn-info btn-block" Style="border-radius: 40px; background-color: #4f145e; border-color: #4f145e;" />

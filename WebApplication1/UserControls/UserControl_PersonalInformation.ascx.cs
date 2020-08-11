@@ -88,7 +88,7 @@ namespace WebApplication1.UserControls
                         break;
                 }
                 if (user.Birth != null)
-                    Birth_TextBox.Text = user.Birth.ToLongDateString();
+                    Birth_TextBox.Text = user.Birth.ToShortDateString();
                 switch (user.Country)
                 {
                     case "iran":
@@ -113,9 +113,68 @@ namespace WebApplication1.UserControls
                     Phone_TextBox.Text = user.Phone.ToString();
                 if (user.Site != null)
                     Site_TextBox.Text = user.Site;
-                if (user.Photo != null)
-                    Photo_TextBox.Text = user.Photo;
+                //if (user.Photo != null)
+                //    Photo_TextBox.Text = user.Photo;
 
+            }
+        }
+
+        protected void Submit_Button_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            if(Name_TextBox.Text!=null &&
+                Family_TextBox.Text != null &&
+                Mobile_TextBox.Text != null &&
+                Address_TextBox.Text != null &&
+                NationalCode_TextBox.Text != null )
+            {
+                user.Name = Name_TextBox.Text;
+                user.Family = Family_TextBox.Text;
+                if(Father_TextBox.Text!="")
+                    user.Father = Father_TextBox.Text;
+                user.Mobile = Int64.Parse(Mobile_TextBox.Text);
+                user.Address = Address_TextBox.Text;
+                if (Education_TextBox.Text != "")
+                    user.Education = Education_TextBox.Text;
+                if (PostalCard_TextBox.Text != "")
+                    user.PostalCard = Int32.Parse(PostalCard_TextBox.Text);
+                if (City_TextBox.Text != "")
+                    user.City = City_TextBox.Text;
+                user.UserType = UserType_DropDownList.Text;
+                user.PersonType = PersonType_DropDownList.Text;
+                user.Employment = Employment_DropDownList.Text;
+                user.Birth = DateTime.Parse(Birth_TextBox.Text);
+                user.Country = Country_DropDownList.Text;
+                user.NationalCode = Int32.Parse(NationalCode_TextBox.Text);
+                if (Int32.Parse(Gender_DropDownList.SelectedItem.Value) == 0)
+                    user.Gender = false;
+                else
+                    user.Gender = true;
+                if (Organization_TextBox.Text != "")
+                    user.Organization = Organization_TextBox.Text;
+                if (Phone_TextBox.Text != "")
+                    user.Phone = Int64.Parse(Phone_TextBox.Text);
+                if (Site_TextBox.Text != "")
+                    user.Site = Site_TextBox.Text;
+                user.Photo = "";
+                user.Email = Email_TextBox.Text;
+                user.Access = true;
+                UserManager userManager = new UserManager();
+                if (userManager.UpdateUserInformation(user))
+                {
+                    Success_Label.Visible = true;
+                    Warning_Label.Visible = false;
+                }
+                else
+                {
+                    Success_Label.Visible = false;
+                    Warning_Label.Visible = true;
+                }
+            }
+            else
+            {
+                Success_Label.Visible = false;
+                Warning_Label.Visible = true;
             }
         }
     }

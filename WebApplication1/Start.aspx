@@ -10,7 +10,7 @@
     <link href="bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
-<body onchange="RespnsePage()" style=" font-family: 'B Mitra'; background-image: url('Images/Start_Background.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+<body onchange="RespnsePage()" style="font-family: 'B Mitra'; background-image: url('Images/Start_Background.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
     <form id="form1" runat="server">
         <asp:HiddenField ID="UserEmail_HiddenField" runat="server" ClientIDMode="Static" />
 
@@ -29,7 +29,7 @@
                     <%-- User Image --%>
                     <img id="imageUser2" class="rounded-circle img-thumbnail pull-left " src="../Images/profile.jpg" style="max-width: 85px; max-height: 85px; margin-top: 7.5px;" />
                     <%-- Logout Button --%>
-                    <a id="LogoutButton2" class="pull-left" href="javascript:__doPostBack('LogoutButton2','')" style="margin-top: 52px; margin-left: 15px; font-size: xx-large; cursor: pointer; text-decoration: none; color: white">
+                    <a id="LogoutButton" class="pull-left" runat="server" onserverclick="LogoutButton_ServerClick" href="javascript:__doPostBack('LogoutButton','')" style="margin-top: 52px; margin-left: 15px; font-size: xx-large; cursor: pointer; text-decoration: none; color: white">
                         <i class="fa fa-power-off" aria-hidden="true"></i>
                     </a>
                     <%-- Message Button --%>
@@ -62,12 +62,13 @@
                             <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #e5d2db; border-color: #e5d2db;" onclick="ChangePassword()"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>تغییر کلمه عبور</a>
                             <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #e5d2e0; border-color: #e5d2e0;" onclick="PersonalInformation()"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>اطلاعات پایه پروفایل</a>
                             <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #e5d2e5; border-color: #e5d2e5;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>کیف پول</a>
-                        </div>
-                        <%-- آمار --%>
-                        <a href="#" class="rounded-pill list-group-item list-group-item-action collapsed" aria-expanded="false" data-toggle="collapse" data-target="#Notification" style="color: #603939; background-color: #e0d2e5; border-color: #e0d2e5;">آمار</a>
-                        <div id="Notification" class="list-group collapse" aria-expanded="false" style="font-size: 18px; font-weight: normal;">
                             <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #dbd2e5; border-color: #dbd2e5;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>آمار</a>
                         </div>
+                        <%-- آمار --%>
+                        <%--<a href="#" class="rounded-pill list-group-item list-group-item-action collapsed" aria-expanded="false" data-toggle="collapse" data-target="#Notification" style="color: #603939; background-color: #e0d2e5; border-color: #e0d2e5;">آمار</a>
+                        <div id="Notification" class="list-group collapse" aria-expanded="false" style="font-size: 18px; font-weight: normal;">
+                            <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #dbd2e5; border-color: #dbd2e5;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>آمار</a>
+                        </div>--%>
                         <%-- درخواست‌ها --%>
                         <a href="#" class="rounded-pill list-group-item list-group-item-action collapsed" aria-expanded="false" data-toggle="collapse" data-target="#Requests" style="color: #603939; background-color: #d7d2e5; border-color: #d7e5d2;">درخواست‌ها</a>
                         <div id="Requests" class="list-group collapse" aria-expanded="false" style="font-size: 18px; font-weight: normal;">
@@ -99,8 +100,8 @@
                     </div>
                 </div>
                 <%-- Dynamic Content of Sidebar Menu --%>
-                <div id="dynamicContent" class="col-12 col-sm-12 col-md-12 col-lg-12" style="overflow-x:hidden; overflow-y: scroll; height:550px;">
-                        <sku:UserControl_PersonalInformation runat="server" ID="UserControl_PersonalInformation" Visible="false" />
+                <div id="dynamicContent" class="col-12 col-sm-12 col-md-12 col-lg-12" style="overflow-x: hidden; overflow-y: scroll; height: 550px;">
+                    <sku:UserControl_PersonalInformation runat="server" ID="UserControl_PersonalInformation" Visible="false" />
                 </div>
             </div>
         </div>
@@ -126,9 +127,9 @@
                     }
                     $('#dynamicContent').css('margin-top', 0);
                 } else if (sizeResponse >= 576) {                                               //sm
-                    $('#dynamicContent').css('margin-top', $('#menu-content').height()+10);
+                    $('#dynamicContent').css('margin-top', $('#menu-content').height() + 10);
                 } else if (sizeResponse < 576) {                                                //xs
-                    $('#dynamicContent').css('margin-top', $('#menu-content').height()+10);
+                    $('#dynamicContent').css('margin-top', $('#menu-content').height() + 10);
                 }
             }
             else {
@@ -188,9 +189,9 @@
                     $('#dynamicContent').css('margin-top', 0);
                 }
                 else if (sizeResponse >= 576) {
-                    $('#dynamicContent').css('margin-top', $('#menu-content').height()+10);
+                    $('#dynamicContent').css('margin-top', $('#menu-content').height() + 10);
                 } else if (sizeResponse < 576) {
-                    $('#dynamicContent').css('margin-top', $('#menu-content').height()+10);
+                    $('#dynamicContent').css('margin-top', $('#menu-content').height() + 10);
                 }
             }
         }

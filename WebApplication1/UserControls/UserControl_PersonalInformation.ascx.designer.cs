@@ -13,6 +13,24 @@ namespace WebApplication1.UserControls {
     public partial class UserControl_PersonalInformation {
         
         /// <summary>
+        /// Success_Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Success_Label;
+        
+        /// <summary>
+        /// Warning_Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Warning_Label;
+        
+        /// <summary>
         /// Name_TextBox control.
         /// </summary>
         /// <remarks>
@@ -184,21 +202,12 @@ namespace WebApplication1.UserControls {
         protected global::System.Web.UI.WebControls.TextBox Email_TextBox;
         
         /// <summary>
-        /// Photo_TextBox control.
+        /// Submit_Button control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Photo_TextBox;
-        
-        /// <summary>
-        /// LinkButton_Submit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LinkButton_Submit;
+        protected global::System.Web.UI.WebControls.Button Submit_Button;
     }
 }
