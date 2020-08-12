@@ -116,6 +116,22 @@ namespace WebApplication1
             return textWriter.ToString();
         }
 
+        [WebMethod]
+        public static string ShowRequests(string email)
+        {
+            Page page = new Page();
+            var userControl = (UserControl)page.LoadControl("~/UserControls/UserControl_ShowRequests.ascx");
+            UserControl_ShowRequests userControl_ShowRequests = (UserControl_ShowRequests)userControl;
+            userControl_ShowRequests.Email = email;
+            userControl.EnableViewState = false;
+
+            HtmlForm form = new HtmlForm();
+            form.Controls.Add(userControl);
+            page.Controls.Add(form);
+            StringWriter textWriter = new StringWriter();
+            HttpContext.Current.Server.Execute(page, textWriter, true);
+            return textWriter.ToString();
+        }
         protected void LogoutButton_ServerClick(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");

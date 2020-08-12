@@ -1,4 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserControl_Admin.ascx.cs" Inherits="WebApplication1.UserControls.UserControl_Admin" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserControl_ShowRequests.ascx.cs" Inherits="WebApplication1.UserControls.UserControl_ShowRequests" %>
+
 <div class="card shadow" style="border-radius: 20px; color: #603939;">
     <%-- Header --%>
     <div class="card-header" style="text-align: right;">
@@ -21,7 +22,7 @@
             </div>
            <div style=" padding: 0px; margin: 10px 5px 10px 10px; direction: rtl;display:inline-block;">
                 <button class="btn btn-outline-danger" type="button" data-toggle="collapse" data-target="#ignored" style=" width: inherit; ">
-                    درخواستهای رد شده
+                    رد درخواست
                
                     <span class="fa fa-arrow-circle-down"></span>
                 </button>
@@ -32,7 +33,7 @@
             </div>
 <div style=" padding: 0px; margin: 10px 5px 10px 10px; direction: rtl;display:inline-block;">
                 <button class="btn btn-outline-success" type="button" data-toggle="collapse" data-target="#accepted" style=" width: inherit;">
-                   درخواستهای قبول شده
+                   قبول درخواست
                
                     <span class="fa fa-arrow-circle-down"></span>
                 </button>
