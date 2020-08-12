@@ -71,7 +71,7 @@
                         <%-- درخواست‌ها --%>
                         <a href="#" class="rounded-pill list-group-item list-group-item-action collapsed" aria-expanded="false" data-toggle="collapse" data-target="#Requests" style="color: #603939; background-color: #d7d2e5; border-color: #d7e5d2;">درخواست‌ها</a>
                         <div id="Requests" class="list-group collapse" aria-expanded="false" style="font-size: 18px; font-weight: normal;">
-                            <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #d2d2e5; border-color: #d2d2e5;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>ثبت درخواست جدید</a>
+                            <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #d2d2e5; border-color: #d2d2e5;" onclick="NewRequest()"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>ثبت درخواست جدید</a>
                             <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #d2d7e5; border-color: #d2d7e5;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>همه درخواست‌ها</a>
                             <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #d2dbe5; border-color: #d2dbe5;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>درخواست‌های تحت بررسی</a>
                             <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #d2e0e5; border-color: #d2e0e5;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>درخواست‌های بازگشتی</a>
@@ -230,6 +230,19 @@
             $.ajax({
                 type: 'POST',
                 url: 'Start.aspx/SendMessage',
+                contentType: "application/json; charset=utf-8",
+                data: "{email:'" + email + "'}",
+                dataType: 'json',
+                success: function (data) {
+                    $("#dynamicContent").html(data.d);
+                }
+            });
+        }
+        function NewRequest() {
+            email = $('#UserEmail_HiddenField').val();
+            $.ajax({
+                type: 'POST',
+                url: 'Start.aspx/NewRequest',
                 contentType: "application/json; charset=utf-8",
                 data: "{email:'" + email + "'}",
                 dataType: 'json',

@@ -99,6 +99,23 @@ namespace WebApplication1
             return textWriter.ToString();
         }
 
+        [WebMethod]
+        public static string NewRequest(string email)
+        {
+            Page page = new Page();
+            var userControl = (UserControl)page.LoadControl("~/UserControls/UserControl_NewRequest1.ascx");
+            UserControl_NewRequest1 userControl_NewRequest1 = (UserControl_NewRequest1)userControl;
+            userControl_NewRequest1.Email = email;
+            userControl.EnableViewState = false;
+
+            HtmlForm form = new HtmlForm();
+            form.Controls.Add(userControl);
+            page.Controls.Add(form);
+            StringWriter textWriter = new StringWriter();
+            HttpContext.Current.Server.Execute(page, textWriter, true);
+            return textWriter.ToString();
+        }
+
         protected void LogoutButton_ServerClick(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");

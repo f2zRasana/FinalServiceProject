@@ -25,7 +25,7 @@
             </div>
             <%--Body--%>
             <div class="card-body">
-                <div class="table-responsive" style="height: 800px;">
+                <div class="table-responsive" style="height: 300px;">
                     <table class="table table-bordered table-responsive">
                         <tbody>
                             <tr>
