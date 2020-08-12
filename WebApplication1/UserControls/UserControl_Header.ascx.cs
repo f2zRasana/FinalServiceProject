@@ -23,5 +23,17 @@ namespace WebApplication1.UserControls
         {
             Response.Redirect("Login.aspx");
         }
+
+        protected void LinkButton_Search_Click(object sender, EventArgs e)
+        {
+            //if (TextBox_Search.Text != null)
+            //{
+            //    if (TextBox_Search.Text == "آزمایشگاه")
+            //    {
+            //        Response.Redirect("WebForm1.aspx");
+            //    }
+
+            //}
+        }
     }
 }
