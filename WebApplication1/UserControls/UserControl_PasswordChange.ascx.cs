@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SKU.BLL.Users;
+using SKU.Entities.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,12 +15,41 @@ namespace WebApplication1.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+                        
         }
 
-        protected void Dismiss_Button_Click(object sender, EventArgs e)
+        protected void Confirm_Button_Click(object sender, EventArgs e)
         {
-            Password_TextBox.Text = "1230";
+            if(Password_TextBox.Text!="" && 
+                NewPassword_TextBox.Text!="" 
+                && NewPassword_Confirm_TextBox.Text!="" 
+                && NewPassword_TextBox.Text == NewPassword_Confirm_TextBox.Text)
+            {
+                User user = new User();
+                user.Email = Email;
+                user.Password = NewPassword_TextBox.Text;
+                UserManager userManager = new UserManager();
+                if (userManager.LoginUser(user))
+                {
+                    if (userManager.UpdatePassword(user, NewPassword_TextBox.Text))
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alertMessage_Success();", true);
+
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alertMessage_Warning();", true);
+                    }
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alertMessage_Warning();", true);
+                }
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alertMessage_Warning();", true);
+            }
         }
     }
 }
