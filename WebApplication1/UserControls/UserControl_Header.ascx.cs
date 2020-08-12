@@ -18,5 +18,10 @@ namespace WebApplication1.UserControls
             HeaderImage headerImage = headerImageManager.GetImage(title);
             Image_Header.ImageUrl = headerImage.FilePathImage;
         }
+
+        protected void LinkButton_Login_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

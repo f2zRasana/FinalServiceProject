@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserControl_CLabSlider.ascx.cs" Inherits="WebApplication1.UserControls.UserControl_CLabSlider" %>
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top:5px;">
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
