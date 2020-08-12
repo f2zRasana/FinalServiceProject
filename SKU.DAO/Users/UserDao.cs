@@ -15,7 +15,7 @@ namespace SKU.DAO.Users
         {
             // 1. Make A New Connection
             SqlConnection sqlConnection = new SqlConnection
-                ("Data Source=.;Initial Catalog=WebTest;User ID=Test;Password=123456");
+                ("Data Source=.;Initial Catalog=SKU;Integrated Security=true");
 
             // 2. Make A Command
             SqlCommand sqlCommand2 = sqlConnection.CreateCommand();
@@ -78,7 +78,7 @@ namespace SKU.DAO.Users
         {
             // 1. Make A New Connection
             SqlConnection sqlConnection = new SqlConnection
-                ("Data Source=.;Initial Catalog=WebTest;User ID=Test;Password=123456");
+                ("Data Source=.;Initial Catalog=SKU;Integrated Security=true");
 
             // 2. Make A Command
             SqlCommand sqlCommand = sqlConnection.CreateCommand();
@@ -113,7 +113,7 @@ namespace SKU.DAO.Users
         {
             // 1. Make A New Connection
             SqlConnection sqlConnection = new SqlConnection
-                ("Data Source=.;Initial Catalog=WebTest;User ID=Test;Password=123456");
+                ("Data Source=.;Initial Catalog=SKU;Integrated Security=true");
 
             // 2. Make A Command
             SqlCommand sqlCommand = sqlConnection.CreateCommand();
@@ -186,7 +186,7 @@ namespace SKU.DAO.Users
         {
             // 1. Make A New Connection
             SqlConnection sqlConnection = new SqlConnection
-                ("Data Source=.;Initial Catalog=WebTest;User ID=Test;Password=123456");
+                ("Data Source=.;Initial Catalog=SKU;Integrated Security=true");
 
             // 2. Make A Command
             SqlCommand sqlCommand = sqlConnection.CreateCommand();
@@ -218,7 +218,7 @@ namespace SKU.DAO.Users
         {
             // 1. Make A New Connection
             SqlConnection sqlConnection = new SqlConnection
-                ("Data Source=.;Initial Catalog=WebTest;User ID=Test;Password=123456");
+                ("Data Source=.;Initial Catalog=SKU;Integrated Security=true");
 
             // 2. Make A Command
             SqlCommand sqlCommand = sqlConnection.CreateCommand();
@@ -294,7 +294,7 @@ namespace SKU.DAO.Users
         {
             // 1. Make A New Connection
             SqlConnection sqlConnection = new SqlConnection
-                ("Data Source=.;Initial Catalog=WebTest;User ID=Test;Password=123456");
+                ("Data Source=.;Initial Catalog=SKU;Integrated Security=true");
 
             // 2. Make A Command
             SqlCommand sqlCommand = sqlConnection.CreateCommand();

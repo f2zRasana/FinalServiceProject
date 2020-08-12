@@ -44,11 +44,6 @@
                     <h4 style="margin-top:9%;">
                         <asp:Label ID="User_Label" runat="server" Style="margin-left:3%;"></asp:Label>
                     </h4>
-                    <%-- Roles(not set yet)!!!!!!!!!!!!!!!!!!!!!! --%>
-                    <select name="dropdown_roles_" id="dropdown_roles" class="pull-left" style="width: 0px; color: black; border-width: 0px; margin-left: 15px; margin-top: 8px; direction: rtl; margin-right: 3px; border-radius: 10px;">
-                        <option value=""></option>
-                        <option value="Author">متقاضی</option>
-                    </select>
                     <%-- User Name & FamilyName --%>
                     <span id="label_Name2" style="font-weight: bold; color: RGB(15,90,155); font-size: 11px; visibility: hidden">زهرا نهاوندی</span>
                 </div>
