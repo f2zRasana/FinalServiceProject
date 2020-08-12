@@ -64,5 +64,10 @@ namespace WebApplication1
             HttpContext.Current.Server.Execute(page, textWriter, false);
             return textWriter.ToString();
         }
+
+        protected void LogoutButton_ServerClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

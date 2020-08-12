@@ -42,8 +42,11 @@
   <ItemGroup>
     <Compile Include="HeaderImages\HeaderImageDao.cs" />
     <Compile Include="Labs\LabDao.cs" />
+    <Compile Include="Main\NewMessageDao.cs" />
+    <Compile Include="Main\ReceiverDao.cs" />
     <Compile Include="Newss\NewsDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refahies\RefPartsDao.cs" />
     <Compile Include="Users\UserDao.cs" />
   </ItemGroup>
   <ItemGroup />

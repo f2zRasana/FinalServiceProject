@@ -13,6 +13,19 @@
     </div>
     <%-- Body --%>
     <div class="card-body">
+        <%-- Alter Boxes --%>
+            <asp:Label ID="Success_Label" runat="server" Text="" Visible="false">
+                <div class="alert alert-success alert-dismissible">
+                    <strong>اطلاعات شما با موفقیت ثبت شد!</strong>
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                </div>
+            </asp:Label>
+            <asp:Label ID="Warning_Label" runat="server" Text="" Visible="false">
+                <div class="alert alert-warning alert-dismissible">
+                    <strong>عملیات با شکست مواجه شد! لطفا از پر کردن همه ی فیلد های ستاره دار اطمینان حاصل کنید.</strong>
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                </div>
+            </asp:Label>
         <div class="row">
             <%-- right side --%>
             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
@@ -61,14 +74,14 @@
                 <%-- کد پستی --%>
                 <div class="input-group mb-3" style="font-size: larger;">
                     <div class="input-group-append">
-                        <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">کد پستی* :</span>
+                        <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">کد پستی :</span>
                     </div>
                     <asp:TextBox ID="PostalCard_TextBox" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
                 </div>
                 <%-- شهر --%>
                 <div class="input-group mb-3" style="font-size: larger;">
                     <div class="input-group-append">
-                        <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">شهر* :</span>
+                        <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">شهر :</span>
                     </div>
                     <asp:TextBox ID="City_TextBox" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
                 </div>
@@ -118,7 +131,7 @@
                     <div class="input-group-append">
                         <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">تولد :</span>
                     </div>
-                    <asp:TextBox ID="Birth_TextBox" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                    <asp:TextBox ID="Birth_TextBox" TextMode="Date" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
                 </div>
                 <%-- کشور --%>
                 <div class="input-group mb-3" style="font-size: larger;">
@@ -174,26 +187,35 @@
                     <div class="input-group-append">
                         <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">ایمیــل :</span>
                     </div>
-                    <asp:TextBox ID="Email_TextBox" Enabled="false" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+                    <asp:TextBox ID="Email_TextBox" Enabled="false" TextMode="Email" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
                 </div>
                 <%-- عکس --%>
                 <div class="input-group mb-3" style="font-size: larger;">
                     <div class="input-group-append">
                         <span class="input-group-text" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px; background-color: #878f99; color: white; border-color: #878f99;">عکس :</span>
                     </div>
-                    <%--<asp:Image ID="Photo_Image" runat="server"  />--%>
-                    <asp:TextBox ID="Photo_TextBox" runat="server" CssClass="form-control" Style="text-align: right; border-bottom-left-radius: 40px; border-top-left-radius: 40px"></asp:TextBox>
+
+                    <div class="custom-file" style="font-size:medium;">
+                        <input type="file" class="custom-file-input" id="customFile" name="filename">
+                        <label class="custom-file-label" for="customFile" style="border-bottom-left-radius: 40px; border-top-left-radius: 40px">Choose file</label>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-right: 10px; padding-top: 5px; text-align: center;">
             <p style="color: #206BA4"></p>
             <p>
-                <button type="button" class="btn btn-outline-secondary rounded-pill">
-                    <asp:Label ID="LinkButton_Submit" runat="server">ثبت اطلاعات</asp:Label></button>
+                <asp:Button ID="Submit_Button" runat="server" OnClick="Submit_Button_Click" Text="ثبت اطلاعات" CssClass="btn btn-outline-secondary rounded-pill" />
             </p>
         </div>
     </div>
 </div>
 <script src="../bootstrap-4.3.1/js/bootstrap.min.js"></script>
 <link href="../bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>

@@ -42,8 +42,11 @@
   <ItemGroup>
     <Compile Include="HeaderImages\HeaderImageManager.cs" />
     <Compile Include="Labs\LabManager.cs" />
+    <Compile Include="Main\NewMessageManager.cs" />
+    <Compile Include="Main\ReceiverManager.cs" />
     <Compile Include="Newss\NewsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refahies\RefPartsManager.cs" />
     <Compile Include="Users\UserManager.cs" />
   </ItemGroup>
   <ItemGroup>

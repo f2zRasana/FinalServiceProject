@@ -33,5 +33,11 @@ namespace SKU.BLL.Users
             UserDao userDao = new UserDao();
             return userDao.HaveAccess(email);
         }
+
+        public bool UpdateUserInformation(User user)
+        {
+            UserDao userDao = new UserDao();
+            return userDao.UpdateUserInformation(user);
+        }
     }
 }

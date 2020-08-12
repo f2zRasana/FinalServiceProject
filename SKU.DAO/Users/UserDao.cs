@@ -74,6 +74,79 @@ namespace SKU.DAO.Users
             
         }
 
+        public bool UpdateUserInformation(User user)
+        {
+            // 1. Make A New Connection
+            SqlConnection sqlConnection = new SqlConnection
+                ("Data Source=.;Initial Catalog=WebTest;User ID=Test;Password=123456");
+
+            // 2. Make A Command
+            SqlCommand sqlCommand = sqlConnection.CreateCommand();
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.CommandText = "User_UpdateInformation";
+
+            //Inputs
+            SqlParameter Name = sqlCommand.Parameters.Add("@Name", System.Data.SqlDbType.NVarChar);
+            Name.Value = user.Name != null ? user.Name : "";
+            SqlParameter Family = sqlCommand.Parameters.Add("@Family", System.Data.SqlDbType.NVarChar);
+            Family.Value = user.Family != null ? user.Family : "";
+            SqlParameter Father = sqlCommand.Parameters.Add("@Father", System.Data.SqlDbType.NVarChar);
+            Father.Value = user.Father != null ? user.Father : "";
+            SqlParameter Mobile = sqlCommand.Parameters.Add("@Mobile", System.Data.SqlDbType.BigInt);
+            Mobile.Value = user.Mobile != 0 ? user.Mobile : 0;
+            SqlParameter Address = sqlCommand.Parameters.Add("@Address", System.Data.SqlDbType.NVarChar);
+            Address.Value = user.Address != null ? user.Address : "";
+            SqlParameter Education = sqlCommand.Parameters.Add("@Education", System.Data.SqlDbType.NVarChar);
+            Education.Value = user.Education != null ? user.Education : "";
+            SqlParameter PostalCard = sqlCommand.Parameters.Add("@PostalCard", System.Data.SqlDbType.Int);
+            PostalCard.Value = user.PostalCard != 0 ? user.PostalCard : 0;
+            SqlParameter City = sqlCommand.Parameters.Add("@City", System.Data.SqlDbType.NVarChar);
+            City.Value = user.City != null ? user.City : "";
+            SqlParameter UserType = sqlCommand.Parameters.Add("@UserType", System.Data.SqlDbType.NVarChar);
+            UserType.Value = user.UserType != null ? user.UserType : "";
+            SqlParameter PersonType = sqlCommand.Parameters.Add("@PersonType", System.Data.SqlDbType.NVarChar);
+            PersonType.Value = user.PersonType != null ? user.PersonType : "";
+            SqlParameter EmploymentType = sqlCommand.Parameters.Add("@EmploymentType", System.Data.SqlDbType.NVarChar);
+            EmploymentType.Value = user.Employment != null ? user.Employment : "";
+            SqlParameter Birth = sqlCommand.Parameters.Add("@Birth", System.Data.SqlDbType.DateTime2);
+            Birth.Value = user.Birth;
+            SqlParameter Country = sqlCommand.Parameters.Add("@Country", System.Data.SqlDbType.NVarChar);
+            Country.Value = user.Country != null ? user.Country : "";
+            SqlParameter NationalCode = sqlCommand.Parameters.Add("@NationalCode", System.Data.SqlDbType.Int);
+            NationalCode.Value = user.NationalCode != 0 ? user.NationalCode : 0;
+            SqlParameter Gender = sqlCommand.Parameters.Add("@Gender", System.Data.SqlDbType.Bit);
+            Gender.Value = user.Gender;
+            SqlParameter Organization = sqlCommand.Parameters.Add("@Organization", System.Data.SqlDbType.NVarChar);
+            Organization.Value = user.Organization != null ? user.Organization : "";
+            SqlParameter Phone = sqlCommand.Parameters.Add("@Phone", System.Data.SqlDbType.BigInt);
+            Phone.Value = user.Phone != 0 ? user.Phone : 0;
+            SqlParameter Site = sqlCommand.Parameters.Add("@Site", System.Data.SqlDbType.NVarChar);
+            Site.Value = user.Site != null ? user.Site : "";
+            SqlParameter Email = sqlCommand.Parameters.Add("@Email", System.Data.SqlDbType.NVarChar);
+            Email.Value = user.Email != null ? user.Email : "";
+            SqlParameter Photo = sqlCommand.Parameters.Add("@Photo", System.Data.SqlDbType.NVarChar);
+            Photo.Value = user.Photo != null ? user.Photo : "";
+            SqlParameter Access = sqlCommand.Parameters.Add("@Access", System.Data.SqlDbType.Bit);
+            Access.Value = user.Access;
+
+            try
+            {
+                sqlConnection.Open();
+                //3.Read Data
+                int numAffected = sqlCommand.ExecuteNonQuery();
+                sqlConnection.Close();
+                if (numAffected > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (SqlException ex)
+            {
+                sqlConnection.Close();
+                return false;
+            }
+        }
+
         public bool HaveAccess(string email)
         {
             // 1. Make A New Connection
