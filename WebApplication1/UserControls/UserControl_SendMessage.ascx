@@ -13,18 +13,19 @@
     }
 </style>
 <%--/***********************************/--%>
-            <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+<asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
 
 <div class="card shadow" style="border-radius: 20px; color: #603939; direction: rtl">
     <asp:UpdatePanel ID="UpdatePanel1" runat="server" ViewStateMode="Enabled"
         EnableViewState="true" UpdateMode="Conditional">
         <ContentTemplate>
             <%--Header--%>
-            <div class="card-header" style="text-align: right;"></div>
-            <h4 style="text-align: right;">سامانه پیام رسانی درون سامانه‌ای</h4>
+            <div class="card-header" style="text-align: right;">
+                <h4 style="text-align: right;">سامانه پیام رسانی درون سامانه‌ای</h4>
+            </div>
             <%--Body--%>
             <div class="card-body">
-                <div class="table-responsive" style="height:800px;">
+                <div class="table-responsive" style="height: 800px;">
                     <table class="table table-bordered table-responsive">
                         <tbody>
                             <tr>
@@ -87,10 +88,8 @@
                                             </table>
                                             <br />
                                             <div>
-
-
                                             </div>
-                                            
+
                                         </div>
                                     </div>
 
@@ -101,7 +100,7 @@
                                             <div class="panel-heading" style="direction: rtl">
                                             </div>
                                             <div class="panel-body">
-                                                <div class="table-responsive" style="width: 100%; direction: rtl;text-align:center;">
+                                                <div class="table-responsive" style="width: 100%; direction: rtl; text-align: center;">
                                                     <asp:GridView ID="gridView2" Width="100%" runat="server" class=" table table-striped table-bordered table-hover table-responsive" DataKeyNames="ID"
                                                         AutoGenerateColumns="False" OnPageIndexChanging="gridView2_PageIndexChanging" HeaderStyle-CssClass="rtl" AllowPaging="True" AllowCustomPaging="True">
                                                         <Columns>
@@ -237,7 +236,7 @@
                                         </tbody>
                                     </table>
                                     <p style="width: 100%; text-align: center; margin-bottom: 15px; padding-bottom: 30px;">
-                                        <a id="link_addall"class="btn-sm btn btn-outline btn-success" style="float: left; display: none;">افزودن همه</a>
+                                        <a id="link_addall" class="btn-sm btn btn-outline btn-success" style="float: left; display: none;">افزودن همه</a>
                                         <a class="btn-sm btn btn-outline btn-info" style="float: left;">جستجو</a>
                                     </p>
                                 </div>
@@ -263,15 +262,14 @@
                                                                                 <asp:GridView ID="gridView1" Width="100%" runat="server" class=" table table-striped table-bordered table-hover table-responsive" DataKeyNames="ID"
                                                                                     AutoGenerateColumns="False" OnPageIndexChanging="gridView1_PageIndexChanging" HeaderStyle-CssClass="rtl" AllowPaging="True" AllowCustomPaging="True">
                                                                                     <Columns>
-                                                                                        <asp:BoundField DataField="ID" HeaderText="#" SortExpression="ID" HeaderStyle-CssClass="alignRight"  HeaderStyle-BackColor="#dd88c1" ItemStyle-BackColor="#c99cba" ></asp:BoundField>
+                                                                                        <asp:BoundField DataField="ID" HeaderText="#" SortExpression="ID" HeaderStyle-CssClass="alignRight" HeaderStyle-BackColor="#dd88c1" ItemStyle-BackColor="#c99cba"></asp:BoundField>
                                                                                         <asp:BoundField DataField="Name_Family" HeaderText="نام و نام خانوادگی" SortExpression="ID" HeaderStyle-CssClass="alignRight" ItemStyle-Width="300px" HeaderStyle-BackColor="#e4b481" ItemStyle-BackColor="#c9b39c"></asp:BoundField>
                                                                                         <asp:BoundField DataField="Email" HeaderText="ایمیل" SortExpression="ID" HeaderStyle-CssClass="alignRight" ItemStyle-Width="300px" HeaderStyle-BackColor="#e8e87d" ItemStyle-BackColor="#c9c99c"></asp:BoundField>
-                                                                                      <%--  <asp:TemplateField ShowHeader="true" HeaderText=" " ItemStyle-Width="150px">
+                                                                                        <%--  <asp:TemplateField ShowHeader="true" HeaderText=" " ItemStyle-Width="150px">
                                                                                             <ItemTemplate>
                                                                                                 <asp:LinkButton runat="server" Text="X" CommandName="Select" CausesValidation="true" CssClass="btn-sm btn btn-outline btn-light" ID="LinkButton1"></asp:LinkButton>
                                                                                             </ItemTemplate>
                                                                                         </asp:TemplateField>--%>
-
                                                                                     </Columns>
                                                                                     <PagerSettings Mode="Numeric" />
                                                                                     <PagerStyle HorizontalAlign="Center" CssClass="pagination-ys" />

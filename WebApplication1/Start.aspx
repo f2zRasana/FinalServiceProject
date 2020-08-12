@@ -6,7 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>پنل متقاضی</title>
     <link href="bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
@@ -94,7 +94,7 @@
                         <%-- پیام رسانی --%>
                         <a href="#" class="rounded-pill list-group-item list-group-item-action collapsed" aria-expanded="false" data-toggle="collapse" data-target="#Messaging" style="color: #603939; background-color: #e5e0d2; border-color: #e5e0d2;">پیام رسانی</a>
                         <div id="Messaging" class="list-group collapse" aria-expanded="false" style="font-size: 18px; font-weight: normal;">
-                            <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #e5dbd2; border-color: #e5dbd2;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>پیامهای درون سیستمی</a>
+                            <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #e5dbd2; border-color: #e5dbd2;" onclick="SendMessage();"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>پیامهای درون سیستمی</a>
                         </div>
                         <%-- مدیریت در خواست ها --%>
                         <a href="#" runat="server" id="admin" visible="false" class="rounded-pill list-group-item list-group-item-action collapsed" aria-expanded="false" data-toggle="collapse" data-target="#ManageRequests" style="color: #603939; background-color: #e5d7d2; border-color: #e5d7d2;">مدیریت در خواست ها</a>
@@ -217,6 +217,19 @@
             $.ajax({
                 type: 'POST',
                 url: 'Start.aspx/PersonalInformation',
+                contentType: "application/json; charset=utf-8",
+                data: "{email:'" + email + "'}",
+                dataType: 'json',
+                success: function (data) {
+                    $("#dynamicContent").html(data.d);
+                }
+            });
+        }
+        function SendMessage() {
+            email = $('#UserEmail_HiddenField').val();
+            $.ajax({
+                type: 'POST',
+                url: 'Start.aspx/SendMessage',
                 contentType: "application/json; charset=utf-8",
                 data: "{email:'" + email + "'}",
                 dataType: 'json',
