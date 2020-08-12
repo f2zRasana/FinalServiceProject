@@ -35,7 +35,7 @@
 <br />
     <div class="row" style="direction:rtl !important">
     <div class="col-sm-12 col-md-3 col-lg-3"style="margin-right:10px;text-align:right;">
- <asp:DataList ID="ListNews"  runat="server" CellSpacing="0" CellPadding="1" Style="font-family: 'B Mitra'; direction: rtl;" RepeatColumns="3" RepeatLayout="Flow" DataKeyField="ID" RepeatDirection="Horizontal" >
+ <asp:DataList ID="ListNews"  runat="server" CellSpacing="0" CellPadding="1" Style="font-family: 'B Mitra'; direction: rtl;" RepeatColumns="3" DataKeyField="ID" RepeatDirection="Horizontal" >
             <ItemTemplate >
                
 
@@ -117,9 +117,3 @@
     });
 </script>
 
-
-<%-- ----------------------------------------- --%>
-<link href="../bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-<script src="../Scripts/jquery-3.5.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="../bootstrap-4.3.1/js/bootstrap.min.js"></script>

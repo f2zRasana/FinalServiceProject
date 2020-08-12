@@ -29,5 +29,41 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::WebApplication1.UserControls.UserControl_Header UserControl_Header;
+        
+        /// <summary>
+        /// UserControl_MainMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebApplication1.UserControls.UserControl_MainMenu UserControl_MainMenu;
+        
+        /// <summary>
+        /// UserControl_MainSlider control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebApplication1.UserControls.UserControl_MainSlider UserControl_MainSlider;
+        
+        /// <summary>
+        /// UserControl_News control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebApplication1.UserControls.UserControl_News UserControl_News;
+        
+        /// <summary>
+        /// UserControl_Footer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebApplication1.UserControls.UserControl_Footer UserControl_Footer;
     }
 }
