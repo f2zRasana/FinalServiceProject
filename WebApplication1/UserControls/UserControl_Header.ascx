@@ -12,7 +12,7 @@
     </div>
     <%-- Header Login Button --%>
     <div class="col-3 col-sm-3 col-md-5 col-lg-5" style="direction: ltr">
-        <asp:Button ID="LinkButton_Login" runat="server" Text="ورود / ثبت نام" CssClass="btn btn-xs btn-outline btn-info" Style="margin-top: 18px; height: 39px; background-color: white; color: #46b8da; border-radius: 10px; font-size: 18px; " />
+        <asp:LinkButton ID="LinkButton_Login" runat="server" OnClick="LinkButton_Login_Click" Text="ورود / ثبت نام" CssClass="btn btn-xs btn-outline btn-info" Style="margin-top: 18px; height: 39px; background-color: white; color: #46b8da; border-radius: 10px; font-size: 18px; margin-left:10px; " />
     </div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <%--<<%--script src="../Scripts/jquery-3.5.1.min.js"></script>
