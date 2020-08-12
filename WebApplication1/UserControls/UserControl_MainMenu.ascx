@@ -16,6 +16,10 @@
   overflow-x:auto;
 
 }
+   .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
 </style>
 <%--/****************************************--%>
 <div class="row">
@@ -26,10 +30,9 @@
         <div class="collapse navbar-collapse menu" id="navbarNavDropdown">
             <ul class="navbar-nav">
 
-
                 <li class="nav-item dropdown active ">
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLinkMarkazi" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">آزمایشگاه مرکزی
-                    </a>
+                    <button Class="nav-link dropdown-toggle" onclick="myFunction()"  id="navbarDropdownMenuLinkMarkazi" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#616161;" >آزمایشگاه مرکزی
+                    </button>
                      <ul class="dropdown-menu dropleft hover-submenu divlab  dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="text-align: right;">
                         <li class="dropdown-submenu">
                     <asp:DataList ID="ListLabs" runat="server" RepeatColumns="3" Width="100%" RepeatLayout="Table" DataKeyField="ID" >
@@ -66,8 +69,8 @@
                 </li>
 <%--/***************************************************************/--%>
                   <li class="nav-item dropdown active ">
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> اداره رفاهی
-                    </a>
+                    <button class="nav-link dropdown-toggle "  id="navbarDropdownMenuLink" onclick="Refahi()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="background-color:#616161;"> اداره رفاهی
+                    </button>
                      <ul class="dropdown-menu dropleft hover-submenu divlab  dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="text-align: right;height:250px">
                         <li class="dropdown-submenu">
                     <asp:DataList ID="ListParts" runat="server" RepeatColumns="3" Width="100%" RepeatLayout="Table" DataKeyField="ID" >
@@ -108,3 +111,28 @@
 <script src="../Scripts/jquery-3.5.1.min.js"></script>
 <script src="../Scripts/MenuScript.js"></script>
 <link href="../Styles/MenuStyle.css" rel="stylesheet" />
+
+<%--<script>
+    function GoClab() {
+            $.ajax({
+                type: 'POST',
+                url: 'UserControl_MainMenu.ascx/GoClab',
+                contentType: "application/json; charset=utf-8",
+                data: " ",
+                dataType: 'json',
+                //success: function (data) {
+                //    $("#dynamicContent").html(data.d);
+                //}
+            });
+        }
+</script>--%>
+<script>
+    function myFunction() {
+        //<a href="../CLab.aspx">../CLab.aspx</a>
+        //location.replace("https://www.w3schools.com")
+        location.replace("../CLab.aspx")
+    }
+      function Refahi() {
+        location.replace("../Refahi.aspx")
+}
+</script>

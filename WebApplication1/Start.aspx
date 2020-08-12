@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Start.aspx.cs" Inherits="WebApplication1.Start" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Start.aspx.cs" Inherits="WebApplication1.Start" Async="true" %>
 
 <%@ Register Src="~/UserControls/UserControl_PersonalInformation.ascx" TagPrefix="sku" TagName="UserControl_PersonalInformation" %>
 

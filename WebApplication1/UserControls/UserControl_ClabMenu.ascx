@@ -7,7 +7,13 @@
     .hover-submenu a:hover {
         background-color: #ef5661;
         color:white;
+            display: block;
+
     }
+           /*.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }*/
 </style>
 
 <%-- ******************************************************************** --%>

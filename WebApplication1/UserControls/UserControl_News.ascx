@@ -39,7 +39,7 @@
             <ItemTemplate >
                
 
-                <table  style="border-spacing:5px; overflow-y: auto; border-radius: 10px; /*width: 450px;*/ height: 255px; margin-top: 4px; margin-bottom: 10px;  background-color: #FFFFFF; box-shadow: 0px 0px 6px -2px #777777; border: 1px solid #f1ecec; border-collapse:separate; direction: rtl; margin-right: 1px; padding:2px;">
+                <table  style="border-spacing:5px; overflow-y: auto; border-radius: 10px; /*width: 450px;*/ height: 255px; margin-top: 4px; margin-bottom: 10px;  background-color: #FFFFFF;  border: 1px solid white; border-collapse:separate; direction: rtl; margin-right: 1px; padding:2px;">
                         <tr  >
                             <td  >
                                 <div class="row">
