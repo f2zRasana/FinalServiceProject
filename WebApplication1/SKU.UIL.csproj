@@ -82,6 +82,7 @@
     <Content Include="UserControls\UserControl_NewRequest2.ascx" />
     <Content Include="UserControls\UserControl_RefSlider.ascx" />
     <Content Include="UserControls\UserControl_SendMessage.ascx" />
+    <Content Include="UserControls\UserControl_Admin.ascx" />
     <Content Include="WebForm1.aspx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -327,6 +328,13 @@
     </Compile>
     <Compile Include="UserControls\UserControl_SendMessage.ascx.designer.cs">
       <DependentUpon>UserControl_SendMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_Admin.ascx.cs">
+      <DependentUpon>UserControl_Admin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_Admin.ascx.designer.cs">
+      <DependentUpon>UserControl_Admin.ascx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

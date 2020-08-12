@@ -1,6 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication1.WebForm1" %>
 
-<%@ Register Src="~/UserControls/UserControl_NewRequest1.ascx" TagPrefix="uc1" TagName="UserControl_NewRequest1" %>
+
+<%@ Register Src="~/UserControls/UserControl_Admin.ascx" TagPrefix="uc1" TagName="UserControl_Admin" %>
+
+
 
 
 
@@ -14,7 +17,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <uc1:UserControl_NewRequest1 runat="server" ID="UserControl_NewRequest1" />
+            <uc1:UserControl_Admin runat="server" id="UserControl_Admin" ></uc1:UserControl_Admin>
         </div>
     </form>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
