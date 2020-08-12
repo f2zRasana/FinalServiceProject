@@ -252,9 +252,6 @@
                                                     <td style="width: 70%;">
                                                         <div>
 
-
-
-
                                                             <div class="container-fluid" style="direction: rtl; text-align: center; float: right">
 
                                                                 <div id="Div_Records" class="panel-body" runat="server">

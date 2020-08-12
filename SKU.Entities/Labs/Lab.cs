@@ -19,8 +19,8 @@ namespace SKU.Entities.Labs
         public string Item7 { get; set; }
         public string FilePathImage { get; set; }
         public string ActiveTime { get; set; }
-
-
+        //public DateTime StartActiveTime { get; set; }
+        //public DateTime EndActiveTime { get; set; }
 
     }
 }

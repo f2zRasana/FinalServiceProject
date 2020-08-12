@@ -66,6 +66,8 @@ namespace SKU.DAO.Labs
             return allLabs;
         }
 
+       
+
         public List<Lab> SelectAllLab()
         {
             List<Lab> allLab = new List<Lab>();
