@@ -11,6 +11,7 @@ namespace WebApplication1.UserControls
 {
     public partial class UserControl_SendMessage : System.Web.UI.UserControl
     {
+        public string Email { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

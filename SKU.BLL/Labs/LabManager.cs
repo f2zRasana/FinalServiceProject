@@ -33,5 +33,7 @@ namespace SKU.BLL.Labs
             LabDao labDao = new LabDao();
             return labDao.SelectAllLab();
         }
+
+       
     }
 }

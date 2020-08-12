@@ -4,6 +4,7 @@ using SKU.Entities.Labs;
 using SKU.Entities.Refahies;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -19,15 +20,39 @@ namespace WebApplication1.UserControls
             if (!IsPostBack) {
 
                 BindDropDown();
-
                 BindGridview(0, 20);
-
-
+                //BindGridview_modal();
             }
                     
            
         }
-       
+
+        //private void BindGridview_modal()
+        //{
+        //    String[] spr = { "از", "تا" };
+        //    Int32 count = 2;
+        //    string title = gridView.SelectedRow.Cells[1].Text;
+        //    string[] tmp = gridView.SelectedRow.Cells[2].Text.Split(spr, count, StringSplitOptions.RemoveEmptyEntries);
+        //    string startActiveTime = tmp[0];
+        //    string endActiveTime = tmp[1];
+        //    DataTable dt = new DataTable();
+        //    dt.Columns.AddRange(new DataColumn[3] { new DataColumn("Title"), new DataColumn("StartActiveTime"), new DataColumn("EndActiveTime") });
+        //    dt.Rows.Add(title, startActiveTime, endActiveTime);
+        //    gridView_modal.DataSource = dt;
+        //    gridView_modal.DataBind();
+        //    //try
+        //    //{
+        //    //    Lab lab = new Lab();
+        //    //    LabManager labManager = new LabManager();
+        //    //    List<Lab> allLab = labManager.SelectAllLabTitles();
+        //    //    gridView.DataSource = allLab;
+        //    //    gridView.DataBind();
+        //    //}
+        //    //catch
+        //    //{
+
+        //    //}
+        //}
 
         private void BindDropDown()
         {
@@ -86,6 +111,22 @@ namespace WebApplication1.UserControls
 
             }
         }
+
+        //protected void Detail_LinkButton_Click(object sender, EventArgs e)
+        //{
+        //    String[] spr = { "از", "تا" };
+        //    Int32 count = 2;
+        //    string title = gridView.SelectedRow.Cells[1].Text;
+        //    string[] tmp = gridView.SelectedRow.Cells[2].Text.Split(spr, count, StringSplitOptions.RemoveEmptyEntries);
+        //    string startActiveTime = tmp[0];
+        //    string endActiveTime = tmp[1];
+        //    Title_Label.Text = title;
+        //    STLabel.Text = startActiveTime;
+        //    ETLabel.Text = endActiveTime;
+            
+        //}
+
+        
     }
 }
 

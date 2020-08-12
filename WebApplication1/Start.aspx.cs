@@ -1,4 +1,5 @@
 ﻿using SKU.BLL.Users;
+using SKU.Entities.Users;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,6 +15,7 @@ namespace WebApplication1
 {
     public partial class Start : System.Web.UI.Page
     {
+        public static string Email { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,11 +23,24 @@ namespace WebApplication1
                 if (Request.QueryString.Count > 0)
                 {
                     UserEmail_HiddenField.Value = Request.QueryString["email"].ToString();
-                    UserManager userManager = new UserManager();
-                    if (!userManager.HaveAccess(UserEmail_HiddenField.Value))
+                    Email= Request.QueryString["email"].ToString(); 
+                    if (UserEmail_HiddenField.Value == "admin@sku.ir")
                     {
-                        UserControl_PersonalInformation.Visible = true;
-                        UserControl_PersonalInformation.Email = UserEmail_HiddenField.Value;
+                        admin.Visible = true;
+                        UserControl_PersonalInformation.Visible = false;
+                        User_Label.Text = "Admin";
+                    }
+                    else
+                    {
+                        UserManager userManager = new UserManager();
+                        if (!userManager.HaveAccess(UserEmail_HiddenField.Value))
+                        {
+                            admin.Visible = false;
+                            UserControl_PersonalInformation.Visible = true;
+                            UserControl_PersonalInformation.Email = UserEmail_HiddenField.Value;
+                        }
+                        User user = userManager.SelectUser(Email);
+                        User_Label.Text = user.Name + " " + user.Family;
                     }
                 }
             }
@@ -51,6 +66,7 @@ namespace WebApplication1
         [WebMethod]
         public static string PersonalInformation(string email)
         {
+            
             Page page = new Page();
             var userControl = (UserControl)page.LoadControl("~/UserControls/UserControl_PersonalInformation.ascx");
             UserControl_PersonalInformation userControl_PersonalInformation = (UserControl_PersonalInformation)userControl;
@@ -62,6 +78,24 @@ namespace WebApplication1
             page.Controls.Add(form);
             StringWriter textWriter = new StringWriter();
             HttpContext.Current.Server.Execute(page, textWriter, false);
+            return textWriter.ToString();
+        }
+
+        [WebMethod]
+        public static string SendMessage(string email)
+        {
+
+            Page page = new Page();
+            var userControl = (UserControl)page.LoadControl("~/UserControls/UserControl_SendMessage.ascx");
+            UserControl_SendMessage userControl_SendMessage = (UserControl_SendMessage)userControl;
+            userControl_SendMessage.Email = email;
+            userControl.EnableViewState = false;
+
+            HtmlForm form = new HtmlForm();
+            form.Controls.Add(userControl);
+            page.Controls.Add(form);
+            StringWriter textWriter = new StringWriter();
+            HttpContext.Current.Server.Execute(page, textWriter, true);
             return textWriter.ToString();
         }
 

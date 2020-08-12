@@ -39,5 +39,11 @@ namespace SKU.BLL.Users
             UserDao userDao = new UserDao();
             return userDao.UpdateUserInformation(user);
         }
+
+        public bool UpdatePassword(User user, string newPass)
+        {
+            UserDao userDao = new UserDao();
+            return userDao.UpdatePassword(user, newPass);
+        }
     }
 }
