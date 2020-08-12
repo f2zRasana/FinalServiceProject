@@ -22,15 +22,6 @@ namespace WebApplication1.UserControls {
         protected global::System.Web.UI.WebControls.Image Image_Header;
         
         /// <summary>
-        /// TextBox_Search control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_Search;
-        
-        /// <summary>
         /// LinkButton_Search control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace WebApplication1.UserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LinkButton_Search;
+        
+        /// <summary>
+        /// TextBox_Search control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Search;
         
         /// <summary>
         /// LinkButton_Login control.
