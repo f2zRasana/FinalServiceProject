@@ -77,7 +77,6 @@
     <Content Include="bootstrap-4.3.1\js\bootstrap.bundle.min.js.map" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.js.map" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.min.js.map" />
-    <Content Include="NewRequest1.aspx" />
     <Content Include="UserControls\UserControl_MainSlider.ascx" />
     <Content Include="UserControls\UserControl_NewRequest1.ascx" />
     <Content Include="UserControls\UserControl_RefSlider.ascx" />
@@ -193,13 +192,6 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="NewRequest1.aspx.cs">
-      <DependentUpon>NewRequest1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewRequest1.aspx.designer.cs">
-      <DependentUpon>NewRequest1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Refahi.aspx.cs">
