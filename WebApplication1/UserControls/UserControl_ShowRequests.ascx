@@ -37,9 +37,9 @@
                             <td>2020-08-11</td>
                             <td>farnoosh</td>
                             <td>
-                                <button style="width: 100%; height: auto; background-color: green">Accept</button></td>
+                                <button style="width: 100%; height: auto" class="btn btn-outline-success">Accept</button></td>
                             <td>
-                                <button style="width: 100%; height: auto; background-color: red">Deny</button></td>
+                                <button style="width: 100%; height: auto;" class="btn btn-outline-danger">Deny</button></td>
 
                         </tr>
                         <tr>
@@ -48,9 +48,9 @@
                             <td>2020-08-10</td>
                             <td>farnoosh</td>
                             <td>
-                                <button style="width: 100%; height: auto; background-color: green">Accept</button></td>
+                                <button style="width: 100%; height: auto;" class="btn btn-outline-success" >Accept</button></td>
                             <td>
-                                <button style="width: 100%; height: auto; background-color: red">Deny</button></td>
+                                <button style="width: 100%; height: auto;" class="btn btn-outline-danger">Deny</button></td>
 
                         </tr>
                     </tbody>
