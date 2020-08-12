@@ -158,10 +158,10 @@ namespace SKU.DAO.Labs
                     if (sqlDataReader.IsDBNull(1) == false)
                         tmpLab.Title = "فرم استفاده از " + sqlDataReader.GetString(1);
 
-                    //if (sqlDataReader.IsDBNull(2) == false)
-                    //    tmpProfessor.ProfRank = sqlDataReader.GetString(2);
+                    if (sqlDataReader.IsDBNull(2) == false)
+                      tmpLab.ActiveTime = sqlDataReader.GetString(2);
 
-                    total = sqlDataReader.GetInt32(2);
+                    total = sqlDataReader.GetInt32(3);
                     allLab.Add(tmpLab);
                 }
                 sqlConnection.Close();
@@ -199,7 +199,7 @@ namespace SKU.DAO.Labs
                     tmpLab = new Lab();
                     tmpLab.ID = sqlDataReader.GetInt32(0);
                     if (sqlDataReader.IsDBNull(1) == false)
-                        tmpLab.Title = "فرم استفاده از " + sqlDataReader.GetString(1);
+                        tmpLab.Title =  sqlDataReader.GetString(1);
 
                     titleLabs.Add(tmpLab);
                 }

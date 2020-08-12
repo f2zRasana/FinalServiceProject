@@ -10,7 +10,6 @@ namespace SKU.Entities.Labs
     {
         public int ID { get; set; }
         public string Title { get; set; }
-        public string FilePathImage { get; set; }
         public string Item1 { get; set; }
         public string Item2 { get; set; }
         public string Item3 { get; set; }
@@ -18,6 +17,10 @@ namespace SKU.Entities.Labs
         public string Item5 { get; set; }
         public string Item6 { get; set; }
         public string Item7 { get; set; }
-        
+        public string FilePathImage { get; set; }
+        public string ActiveTime { get; set; }
+
+
+
     }
 }
