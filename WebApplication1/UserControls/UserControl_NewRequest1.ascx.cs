@@ -5,9 +5,12 @@ using SKU.Entities.Refahies;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace WebApplication1.UserControls
@@ -19,7 +22,7 @@ namespace WebApplication1.UserControls
         {
 
             if (!IsPostBack) {
-
+                UserEmail_HiddenField.Value = Email;
                 BindDropDown();
                 BindGridview(0, 20);
                 //BindGridview_modal();
@@ -28,6 +31,22 @@ namespace WebApplication1.UserControls
            
         }
 
+        [WebMethod]
+        public static string ConfirmRequest(string email)
+        {
+            Page page = new Page();
+            var userControl = (UserControl)page.LoadControl("~/UserControls/UserControl_NewRequest2.ascx");
+            UserControl_NewRequest2 userControl_NewRequest2 = (UserControl_NewRequest2)userControl;
+            userControl_NewRequest2.Email = email;
+            userControl.EnableViewState = false;
+
+            HtmlForm form = new HtmlForm();
+            form.Controls.Add(userControl);
+            page.Controls.Add(form);
+            StringWriter textWriter = new StringWriter();
+            HttpContext.Current.Server.Execute(page, textWriter, false);
+            return textWriter.ToString();
+        }
         //private void BindGridview_modal()
         //{
         //    String[] spr = { "از", "تا" };
@@ -113,6 +132,13 @@ namespace WebApplication1.UserControls
             }
         }
 
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Control UC_MBU = (Control)this.LoadControl("~/UserControls/UserControl_NewRequest2.ascx");
+            content_here.Controls.Clear();
+            content_here.Controls.Add(UC_MBU);
+        }
+
         //protected void Detail_LinkButton_Click(object sender, EventArgs e)
         //{
         //    String[] spr = { "از", "تا" };
@@ -124,10 +150,10 @@ namespace WebApplication1.UserControls
         //    Title_Label.Text = title;
         //    STLabel.Text = startActiveTime;
         //    ETLabel.Text = endActiveTime;
-            
+
         //}
 
-        
+
     }
 }
 

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1.UserControls
 {
-    public partial class UserControl_NewRequest2 : System.Web.UI.UserControl
+    public partial class UserControl_ShowRequests : System.Web.UI.UserControl
     {
         public string Email { get; set; }
 

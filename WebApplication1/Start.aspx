@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Start.aspx.cs" Inherits="WebApplication1.Start" Async="true" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Start.aspx.cs" Inherits="WebApplication1.Start" %>
 
 <%@ Register Src="~/UserControls/UserControl_PersonalInformation.ascx" TagPrefix="sku" TagName="UserControl_PersonalInformation" %>
 
@@ -99,7 +99,7 @@
                         <%-- مدیریت در خواست ها --%>
                         <a href="#" runat="server" id="admin" visible="false" class="rounded-pill list-group-item list-group-item-action collapsed" aria-expanded="false" data-toggle="collapse" data-target="#ManageRequests" style="color: #603939; background-color: #e5d7d2; border-color: #e5d7d2;">مدیریت در خواست ها</a>
                         <div id="ManageRequests" class="list-group collapse" aria-expanded="false" style="font-size: 18px; font-weight: normal;">
-                            <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #e4d1d1; border-color: #e4d1d1;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>مشاهده درخواست ها</a>
+                            <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #e4d1d1; border-color: #e4d1d1;" onclick="ShowRequests()"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>مشاهده درخواست ها</a>
                         </div>
                     </div>
                 </div>
@@ -243,6 +243,19 @@
             $.ajax({
                 type: 'POST',
                 url: 'Start.aspx/NewRequest',
+                contentType: "application/json; charset=utf-8",
+                data: "{email:'" + email + "'}",
+                dataType: 'json',
+                success: function (data) {
+                    $("#dynamicContent").html(data.d);
+                }
+            });
+        }
+        function ShowRequests() {
+            email = $('#UserEmail_HiddenField').val();
+            $.ajax({
+                type: 'POST',
+                url: 'Start.aspx/ShowRequests',
                 contentType: "application/json; charset=utf-8",
                 data: "{email:'" + email + "'}",
                 dataType: 'json',
