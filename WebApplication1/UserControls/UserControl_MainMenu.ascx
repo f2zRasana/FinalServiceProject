@@ -31,7 +31,7 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item dropdown active ">
-                    <button Class="nav-link dropdown-toggle" onclick="myFunction()"  id="navbarDropdownMenuLinkMarkazi" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#616161;" >آزمایشگاه مرکزی
+                    <button Class="nav-link dropdown-toggle" onclick="myFunction()"  id="navbarDropdownMenuLinkMarkazi" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:0px hidden; background-color:#616161;" >آزمایشگاه مرکزی
                     </button>
                      <ul class="dropdown-menu dropleft hover-submenu divlab  dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="text-align: right;">
                         <li class="dropdown-submenu">
@@ -69,7 +69,7 @@
                 </li>
 <%--/***************************************************************/--%>
                   <li class="nav-item dropdown active ">
-                    <button class="nav-link dropdown-toggle "  id="navbarDropdownMenuLink" onclick="Refahi()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="background-color:#616161;"> اداره رفاهی
+                    <button class="nav-link dropdown-toggle "  id="navbarDropdownMenuLink" onclick="Refahi()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="border:0px hidden; background-color:#616161;"> اداره رفاهی
                     </button>
                      <ul class="dropdown-menu dropleft hover-submenu divlab  dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="text-align: right;height:250px">
                         <li class="dropdown-submenu">
