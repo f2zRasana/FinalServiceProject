@@ -77,6 +77,7 @@
     <Content Include="bootstrap-4.3.1\js\bootstrap.bundle.min.js.map" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.js.map" />
     <Content Include="bootstrap-4.3.1\js\bootstrap.min.js.map" />
+    <Content Include="Images\Carousel_Refahi.jpg" />
     <Content Include="NewRequest1.aspx" />
     <Content Include="UserControls\UserControl_MainSlider.ascx" />
     <Content Include="UserControls\UserControl_NewRequest1.ascx" />

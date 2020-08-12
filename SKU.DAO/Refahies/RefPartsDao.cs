@@ -40,7 +40,7 @@ namespace SKU.DAO.Refahies
                     if (sqlDataReader.IsDBNull(1) == false)
                         tmpParts.Title = sqlDataReader.GetString(1);
                     if (sqlDataReader.IsDBNull(2) == false)
-                        tmpParts.Item1 = sqlDataReader.GetString(2);
+                        tmpParts.ImagePath = sqlDataReader.GetString(2);
                     if (sqlDataReader.IsDBNull(3) == false)
                         tmpParts.Item1 = sqlDataReader.GetString(3);
                     if (sqlDataReader.IsDBNull(4) == false)

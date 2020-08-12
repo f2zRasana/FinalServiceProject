@@ -16,6 +16,7 @@
 
 </div>
 <br />
+<img src="" />
 <br />
 
 <div class=" container-fluid" style="direction: rtl;">
@@ -47,7 +48,7 @@
                             <div class="row">
 
                                 <div style="width: 100%; text-align: right; padding-top: 1px; font-size: 16px; text-overflow: ellipsis; display: block; width: 300px; overflow: hidden; white-space: nowrap;"
-                                    class="col-xs-6 col-sm-6 col-md-6 col-lg-8  pull-right">
+                                    class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
 
 
                                     <asp:Label ID="Label_1" runat="server"><span class="fa fa-circle"></span></asp:Label>
@@ -72,7 +73,7 @@
                                 </div>
                                 <%-- clab images --%>
 
-                                <asp:Image ID="CLab_Im" ImageUrl='<%# Eval("ImagePath") %>' runat="server" Height="160px" Style="align-items: flex-end; right: -5px; width: 50%; direction: ltr; position: relative; left: 2px;" class="col-xs-6 col-sm-6 col-md-6 col-lg-4 img-responsive ulimages " />
+                                <asp:Image ID="CLab_Im" ImageUrl='<%# Eval("ImagePath") %>' runat="server" Height="160px" Style="align-items: flex-end; right: -5px; direction: ltr; position: relative; left: 2px;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-responsive ulimages " />
 
                             </div>
 

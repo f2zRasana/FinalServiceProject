@@ -4,6 +4,8 @@
 <%@ Register Src="~/UserControls/UserControl_RefahiPart.ascx" TagPrefix="SKU" TagName="UserControl_RefahiPart" %>
 <%@ Register Src="~/UserControls/UserControl_News.ascx" TagPrefix="SKU" TagName="UserControl_News" %>
 <%@ Register Src="~/UserControls/UserControl_Footer.ascx" TagPrefix="SKU" TagName="UserControl_Footer" %>
+<%@ Register Src="~/UserControls/UserControl_RefahiSlider.ascx" TagPrefix="SKU" TagName="UserControl_RefahiSlider" %>
+<%@ Register Src="~/UserControls/UserControl_RefMenu.ascx" TagPrefix="SKU" TagName="UserControl_RefMenu" %>
 
 
 
@@ -18,7 +20,10 @@
 <body>
     <form id="form1" runat="server">
     <div>
+       
         <SKU:UserControl_Header runat="server" id="UserControl_Header" ></SKU:UserControl_Header>
+        <SKU:UserControl_RefMenu runat="server" ID="UserControl_RefMenu" ></SKU:UserControl_RefMenu>
+        <SKU:UserControl_RefahiSlider runat="server" ID="UserControl_RefahiSlider" ></SKU:UserControl_RefahiSlider>
         <SKU:UserControl_News runat="server" id="UserControl_News" ></SKU:UserControl_News>
         <SKU:UserControl_RefahiPart runat="server" id="UserControl_RefahiPart" ></SKU:UserControl_RefahiPart>
         <SKU:UserControl_Footer runat="server" id="UserControl_Footer" ></SKU:UserControl_Footer>

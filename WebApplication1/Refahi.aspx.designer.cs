@@ -31,6 +31,24 @@ namespace WebApplication1 {
         protected global::WebApplication1.UserControls.UserControl_Header UserControl_Header;
         
         /// <summary>
+        /// UserControl_RefMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebApplication1.UserControls.UserControl_RefMenu UserControl_RefMenu;
+        
+        /// <summary>
+        /// UserControl_RefahiSlider control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebApplication1.UserControls.UserControl_RefahiSlider UserControl_RefahiSlider;
+        
+        /// <summary>
         /// UserControl_News control.
         /// </summary>
         /// <remarks>
