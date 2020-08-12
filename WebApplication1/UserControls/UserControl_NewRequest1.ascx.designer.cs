@@ -13,6 +13,24 @@ namespace WebApplication1.UserControls {
     public partial class UserControl_NewRequest1 {
         
         /// <summary>
+        /// UserEmail_HiddenField control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField UserEmail_HiddenField;
+        
+        /// <summary>
+        /// content_here control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl content_here;
+        
+        /// <summary>
         /// Select_DropDownList control.
         /// </summary>
         /// <remarks>

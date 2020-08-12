@@ -1,7 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserControl_NewRequest1.ascx.cs" Inherits="WebApplication1.UserControls.UserControl_NewRequest1" %>
 
+<asp:HiddenField ID="UserEmail_HiddenField" runat="server" />
 <%-- Code Body --%>
-<div class="card shadow" style="border-radius: 20px; color: #603939;">
+<div class="card shadow" id="content_here" runat="server" style="border-radius: 20px; color: #603939;">
     <%-- Header --%>
     <div class="card-header" style="text-align: right;">
         <h4>ثبت درخواست جدید</h4>
@@ -95,7 +96,8 @@
                                         </asp:TemplateField>
                                         <asp:TemplateField ShowHeader="false" ItemStyle-HorizontalAlign="Center" ItemStyle-Width="150px" ItemStyle-VerticalAlign="Middle">
                                             <ItemTemplate>
-                                                <asp:LinkButton runat="server" Text="ثبت درخواست " CommandName="Select" CausesValidation="False" CssClass=" btn btn-sm btn-outline-success" ID="LinkButton1" Style="margin-top: 5px; margin-right: 0px;"></asp:LinkButton>
+                                                <%--<a class="btn btn-sm btn-outline-success" onclick="ConfirmRequest()" id="request" style="margin-top: 5px; margin-right: 0px;"> ثبت درخواست</a>--%>
+                                                <asp:LinkButton runat="server" Text="ثبت درخواست " OnClick="LinkButton1_Click" CommandName="Select" CausesValidation="False" CssClass=" btn btn-sm btn-outline-success" ID="LinkButton1" Style="margin-top: 5px; margin-right: 0px;"></asp:LinkButton>
                                             </ItemTemplate>
                                         </asp:TemplateField>
 
@@ -160,12 +162,22 @@
     </div>
 </div>
 
-
-
-
-
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link href="../../bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
 <script src="../../bootstrap-4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+    function ConfirmRequest() {
+        email = $('#UserEmail_HiddenField').val();
+            $.ajax({
+                type: 'POST',
+                url: 'UserControl_NewRequest1.ascx/ConfirmRequest',
+                contentType: "application/json; charset=utf-8",
+                data: "{email:'" + email + "'}",
+                dataType: 'json',
+                success: function (data) {
+                    $("#content_here").html(data.d);
+                }
+            });
+    }
+</script>
