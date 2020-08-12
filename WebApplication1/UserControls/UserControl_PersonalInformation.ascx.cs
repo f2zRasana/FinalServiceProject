@@ -122,11 +122,7 @@ namespace WebApplication1.UserControls
         protected void Submit_Button_Click(object sender, EventArgs e)
         {
             User user = new User();
-            if(Name_TextBox.Text!=null &&
-                Family_TextBox.Text != null &&
-                Mobile_TextBox.Text != null &&
-                Address_TextBox.Text != null &&
-                NationalCode_TextBox.Text != null )
+            if(Name_TextBox.Text != "" && Family_TextBox.Text != "" && Mobile_TextBox.Text != "" && Address_TextBox.Text != "" && NationalCode_TextBox.Text != "")
             {
                 user.Name = Name_TextBox.Text;
                 user.Family = Family_TextBox.Text;
@@ -143,7 +139,8 @@ namespace WebApplication1.UserControls
                 user.UserType = UserType_DropDownList.Text;
                 user.PersonType = PersonType_DropDownList.Text;
                 user.Employment = Employment_DropDownList.Text;
-                user.Birth = DateTime.Parse(Birth_TextBox.Text);
+                if (Birth_TextBox.Text != "")
+                    user.Birth = DateTime.Parse(Birth_TextBox.Text);
                 user.Country = Country_DropDownList.Text;
                 user.NationalCode = Int32.Parse(NationalCode_TextBox.Text);
                 if (Int32.Parse(Gender_DropDownList.SelectedItem.Value) == 0)
