@@ -9,6 +9,10 @@
         background-color: #ef5661;
         color: white;
     }
+       .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
 </style>
 
 <%-- ******************************************************************** --%>

@@ -24,6 +24,7 @@
         <div class="container-fluid">
             <SKU:UserControl_Header runat="server" ID="UserControl_Header"></SKU:UserControl_Header>
             <SKU:UserControl_ClabMenu runat="server" ID="UserControl_ClabMenu" />
+
             <SKU:UserControl_CLabSlider runat="server" ID="UserControl_CLabSlider"></SKU:UserControl_CLabSlider>
             <SKU:UserControl_News runat="server" ID="UserControl_News"></SKU:UserControl_News>
             <SKU:UserControl_Labs runat="server" ID="UserControl_Labs"></SKU:UserControl_Labs>

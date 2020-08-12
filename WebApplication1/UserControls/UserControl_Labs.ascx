@@ -124,7 +124,4 @@
     });
 </script>
 
-<link href="../bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-<script src="../Scripts/jquery-3.5.1.min.js"></script>
-<script src="../bootstrap-4.3.1/js/bootstrap.min.js"></script>
 
