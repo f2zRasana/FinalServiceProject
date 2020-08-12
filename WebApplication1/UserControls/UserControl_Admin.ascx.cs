@@ -13,5 +13,10 @@ namespace WebApplication1.UserControls
         {
 
         }
+
+        protected void gridView2_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+
+        }
     }
 }
