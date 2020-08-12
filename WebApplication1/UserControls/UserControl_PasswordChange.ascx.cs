@@ -20,9 +20,9 @@ namespace WebApplication1.UserControls
 
         protected void Confirm_Button_Click(object sender, EventArgs e)
         {
-            if(Password_TextBox.Text!="" && 
-                NewPassword_TextBox.Text!="" 
-                && NewPassword_Confirm_TextBox.Text!="" 
+            if (Password_TextBox.Text != "" &&
+                NewPassword_TextBox.Text != ""
+                && NewPassword_Confirm_TextBox.Text != ""
                 && NewPassword_TextBox.Text == NewPassword_Confirm_TextBox.Text)
             {
                 User user = new User();
@@ -50,6 +50,11 @@ namespace WebApplication1.UserControls
             {
                 ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alertMessage_Warning();", true);
             }
+        }
+
+        protected void Dismiss_Button_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
