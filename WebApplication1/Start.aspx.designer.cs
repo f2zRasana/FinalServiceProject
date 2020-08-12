@@ -40,6 +40,15 @@ namespace WebApplication1 {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor LogoutButton;
         
         /// <summary>
+        /// User_Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label User_Label;
+        
+        /// <summary>
         /// sidebarMenu control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl sidebarMenu;
+        
+        /// <summary>
+        /// admin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor admin;
         
         /// <summary>
         /// UserControl_PersonalInformation control.

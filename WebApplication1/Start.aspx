@@ -40,6 +40,10 @@
                     <a class="pull-left" onclick="ShowUserRoles();" id="UserRoles">
                         <i class="fa fa-user" aria-hidden="true" style="color: white; margin-top: 55px; margin-left: 15px; font-size: xx-large"></i>
                     </a>
+                    <%-- User Name Lable --%>
+                    <h4 style="margin-top:9%;">
+                        <asp:Label ID="User_Label" runat="server" Style="margin-left:3%;"></asp:Label>
+                    </h4>
                     <%-- Roles(not set yet)!!!!!!!!!!!!!!!!!!!!!! --%>
                     <select name="dropdown_roles_" id="dropdown_roles" class="pull-left" style="width: 0px; color: black; border-width: 0px; margin-left: 15px; margin-top: 8px; direction: rtl; margin-right: 3px; border-radius: 10px;">
                         <option value=""></option>
@@ -96,6 +100,11 @@
                         <a href="#" class="rounded-pill list-group-item list-group-item-action collapsed" aria-expanded="false" data-toggle="collapse" data-target="#Messaging" style="color: #603939; background-color: #e5e0d2; border-color: #e5e0d2;">پیام رسانی</a>
                         <div id="Messaging" class="list-group collapse" aria-expanded="false" style="font-size: 18px; font-weight: normal;">
                             <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #e5dbd2; border-color: #e5dbd2;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>پیامهای درون سیستمی</a>
+                        </div>
+                        <%-- مدیریت در خواست ها --%>
+                        <a href="#" runat="server" id="admin" visible="false" class="rounded-pill list-group-item list-group-item-action collapsed" aria-expanded="false" data-toggle="collapse" data-target="#ManageRequests" style="color: #603939; background-color: #e5d7d2; border-color: #e5d7d2;">مدیریت در خواست ها</a>
+                        <div id="ManageRequests" class="list-group collapse" aria-expanded="false" style="font-size: 18px; font-weight: normal;">
+                            <a href="#" class="rounded-pill list-group-item list-group-item-action" style="color: #603939; background-color: #e4d1d1; border-color: #e4d1d1;"><i class="fa fa-angle-left" aria-hidden="true">&nbsp;</i>مشاهده درخواست ها</a>
                         </div>
                     </div>
                 </div>
