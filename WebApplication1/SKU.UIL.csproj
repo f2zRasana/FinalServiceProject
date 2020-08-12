@@ -79,6 +79,7 @@
     <Content Include="bootstrap-4.3.1\js\bootstrap.min.js.map" />
     <Content Include="UserControls\UserControl_MainSlider.ascx" />
     <Content Include="UserControls\UserControl_NewRequest1.ascx" />
+    <Content Include="UserControls\UserControl_NewRequest2.ascx" />
     <Content Include="UserControls\UserControl_RefSlider.ascx" />
     <Content Include="UserControls\UserControl_SendMessage.ascx" />
     <Content Include="WebForm1.aspx" />
@@ -263,6 +264,13 @@
     </Compile>
     <Compile Include="UserControls\UserControl_NewRequest1.ascx.designer.cs">
       <DependentUpon>UserControl_NewRequest1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_NewRequest2.ascx.cs">
+      <DependentUpon>UserControl_NewRequest2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_NewRequest2.ascx.designer.cs">
+      <DependentUpon>UserControl_NewRequest2.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_News.ascx.cs">
       <DependentUpon>UserControl_News.ascx</DependentUpon>
